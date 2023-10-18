@@ -1,0 +1,6 @@
+Etapas
+> Contrutora (software voltado para uma construtora atualmente):
+- Cadastrar cliente
+- Cadastrar obra
+- Cronograma
+- Acompanhamento
