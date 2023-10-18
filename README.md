@@ -1,6 +1,4 @@
-## Projeto Obra360 - TCC
-
-🏗️💻
+## Projeto Obra360 - TCC 🏗️💻
 
 ### Apresentação
 Bem-vindo(a) ao projeto Obra360 desenvolvido como parte de nosso TCC! Nossa equipe é composta por:
