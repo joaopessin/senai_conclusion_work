@@ -26,6 +26,19 @@ body { font-family: Tahoma, Geneva, Verdana, sans-serif; }
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 
+#submit {
+  color: #ffffff; /* Branco - Cor dos links */
+  padding: 0.5vh 12vw;
+  margin-top: 25px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#submit { background-color: #ff4500; }
+#submit:hover { background-color: #7a2100; /* Cor da linha de sublinhado dos links - mais escura no hover */ }
+
 
 
 
