@@ -1,6 +1,4 @@
-CREATE DATABASE obra360 CHARACTER SET utf8
-COLLATE utf8_general_ci;
-
+CREATE DATABASE obra360 CHARACTER SET utf8 COLLATE utf8_general_ci;
 USE obra360;
 
 CREATE TABLE funcionarios_construtora (
@@ -19,9 +17,4 @@ INSERT INTO funcionarios_construtora (email_func_const, senha_func_const) VALUES
 INSERT INTO clientes (email_cliente, senha_cliente) VALUES ('felipe@gmail.com','321');
 SELECT * from funcionarios_construtora;
 SELECT * from clientes;
-
-
-
-
-
  
