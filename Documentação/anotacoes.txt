@@ -1,8 +1,0 @@
-Etapas
-> Contrutora (software voltado para uma construtora atualmente):
-- Cadastrar cliente
-- Cadastrar obra
-- Cronograma
-- Acompanhamento
-
-> Exibir exemplos reais que nos auxiliaram durante a construção do projeto (possiveis futuros clientes): Praia Eng. | Cesar .M - Construções e Reformas
