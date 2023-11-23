@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login funcionario</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="../style/tela_login_construtora.css">
+    <link rel="stylesheet" href="style/tela_login_cliente.css">
 </head>
 <body>
     <div class="container">
@@ -13,32 +13,32 @@
             <div class="col-md-6 retangulo-horizontal">
                 <div class="op-logins">
 
-                    <a href="index.php"><img class="logo-tela-log" src="../image/obra360.png" alt="Logo do Obra360" width="100" height="100"></a>
+                    <a href="tela_inicial.php"><img class="logo-tela-log" src="image/obra360.png" alt="Logo do Obra360" width="100" height="100"></a>
                     
                     <h2 class="branco">SEJA BEM-VINDO(A)!</h2>
                     <p class="branco">Escolha uma das opcções para login.</p>
 
                     <div class="btns-login">
-                        <a class="btn btn-secondary btn-funcionario azul" href="loginFuncionario.php">CONSTRUTORA</a>
-                        <a class="btn btn-secondary btn-cliente laranja" href="loginCliente.php">CLIENTE</a>
+                        <a class="btn btn-secondary btn-funcionario azul" href="tela_login_construtora.php">CONSTRUTORA</a>
+                        <a class="btn btn-secondary btn-cliente laranja" href="tela_login_cliente.php">CLIENTE</a>
                     </div>
                 </div>
             </div>
 
             <div class="col-md-6 retangulo-vertical">
 
-                <h3 class="branco d-flex justify-content-center align-items-center mt-5">ÁREA DA CONSTRUTORA</h3>
+                <h3 class="branco d-flex justify-content-center align-items-center mt-5">ÁREA DO CLIENTE</h3>
 
                 <div class="login-box">
                     
-                    <form action="./bd/validarLogin_funcionario.php/conexao.php" method="post">
+                    <form action="./database/validarLogin_cliente.php/conexao.php" method="post">
                         <div class="user-box">
-                            <input id="inputEmail" type="text" name="email_func_const" required="">
+                            <input id="inputEmail" type="text" name="email_cliente" required="">
                             <label>email</label>
                         </div> 
 
                         <div class="user-box">
-                            <input id="inputSenha" type="password" name="senha_func_const" required="">
+                            <input id="inputSenha" type="password" name="senha_cliente" required="">
                             <label>senha</label>
                         </div>
 
@@ -47,7 +47,7 @@
                             <span></span>
                             <span></span>
                             <span></span>
-                            <input class="btn btn-secondary laranja btn-entrar" type="submit" value="ENTRAR">
+                            <input class="btn btn-secondary azul btn-entrar" type="submit" value="ENTRAR">
                         </a>
                     </form>
 

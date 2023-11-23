@@ -31,7 +31,7 @@
             }
             $_SESSION['id'] = $resultado2['id_cliente'];
             $_SESSION['email'] = $resultado2['email_cliente'];
-            header('Location: ../../telaPrincipal_Cliente.php');
+            header('Location: ../../content/tela_principal_cliente.php');
  
         }
  
