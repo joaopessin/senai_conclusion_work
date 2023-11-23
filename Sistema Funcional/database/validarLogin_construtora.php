@@ -36,7 +36,7 @@
             }
             $_SESSION['id'] = $resultado['id_func_const'];
             $_SESSION['email'] = $resultado['email_func_const'];
-            header('Location: ../../telaPrincipal_Construtora.php');
+            header('Location: ../../content/tela_principal_construtora.php');
         }
 
         } catch(Exception $e){
