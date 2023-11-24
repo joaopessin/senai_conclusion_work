@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login funcionario</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="style/tela_login_cliente.css">
+    <link rel="stylesheet" href="../style/tela_login_cliente.css">
 </head>
 <body>
     <div class="container">
@@ -13,7 +13,7 @@
             <div class="col-md-6 retangulo-horizontal">
                 <div class="op-logins">
 
-                    <a href="tela_inicial.php"><img class="logo-tela-log" src="image/obra360.png" alt="Logo do Obra360" width="100" height="100"></a>
+                    <a href="tela_inicial.php"><img class="logo-tela-log" src="../image/obra360.png" alt="Logo do Obra360" width="100" height="100"></a>
                     
                     <h2 class="branco">SEJA BEM-VINDO(A)!</h2>
                     <p class="branco">Escolha uma das opcções para login.</p>
@@ -31,7 +31,7 @@
 
                 <div class="login-box">
                     
-                    <form action="./database/validarLogin_cliente.php/conexao.php" method="post">
+                    <form action="../database/validarLogin_cliente.php/conexao.php" method="post">
                         <div class="user-box">
                             <input id="inputEmail" type="text" name="email_cliente" required="">
                             <label>email</label>

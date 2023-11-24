@@ -1,0 +1,164 @@
+:root {
+  --menuBackgroundColor: #2c3e50; /* Azul Escuro - Cor de fundo do menu */
+  --rLinkColor: #ffffff; /* Branco - Cor dos links */
+  --menuLinkColor: #ffffff; /* Azul - Cor dos links no menu */
+  --menuLinkColorUnactive: hsl(204, 8%, 76%); /* Cinza - Cor dos links não ativos no menu */
+  --textUnderlinedLineColor: #ff4500; /* Branco - Cor da linha de sublinhado dos links */
+  --menuBoxShadow: 0 1px 3px 0 rgba(0, 0, 0, .12), 0 1px 2px 0 rgba(0, 0, 0, .24); /* Sombra do menu */
+}
+
+.r-link {
+  display: var(--rLinkDisplay, inline-flex);
+}
+
+.r-link[href] {
+  color: var(--rLinkColor);
+  text-decoration: var(--rLinkTextDecoration, none);
+}
+
+.r-list {
+  padding-left: var(--rListPaddingLeft, 0);
+  margin-top: var(--rListMarginTop, 0);
+  margin-bottom: var(--rListMarginBottom, 0);
+  list-style: var(--rListListStyle, none);
+}
+
+.menu {
+  --rLinkColor: var(--menuLinkColor, currentColor);
+}
+
+.menu__link {
+  display: var(--menuLinkDisplay, block);
+}
+
+.menu__link:focus {
+  background-color: var(--textUnderlinedLineColor, currentColor);
+  color: #fff; /* Adicionando a cor do texto quando focado */
+  transition: background-color 0.8s ease, color 0.8s ease; /* Adicionando transição */
+}
+
+.menu:hover .menu__link:not(:hover) {
+  --rLinkColor: var(--menuLinkColorUnactive, rgba(22, 22, 22, .35));
+}
+
+.menu {
+  background-color: var(--menuBackgroundColor, #f0f0f0);
+  box-shadow: var(--menuBoxShadow, 0 1px 3px 0 rgba(0, 0, 0, .12), 0 1px 2px 0 rgba(0, 0, 0, .24));
+}
+
+.menu__list {
+  display: flex;
+  justify-content: space-between; /* Espaçamento uniforme entre os elementos */
+  align-items: center; /* Centraliza verticalmente */
+  text-align: center;
+}
+
+.menu__logo {
+  order: -1; /* Move o logo para o início da lista */
+}
+
+.menu__link {
+  padding: var(--menuLinkPadding, 1.5rem 2.5rem);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.text-underlined {
+  position: relative;
+  overflow: hidden;
+
+  will-change: color;
+  transition: color .25s ease-out;
+}
+
+.text-underlined::before,
+.text-underlined::after {
+  content: "";
+  width: 0;
+  height: 3px;
+  background-color: var(--textUnderlinedLineColor, currentColor);
+
+  will-change: width;
+  transition: width .1s ease-out;
+
+  position: absolute;
+  bottom: 0;
+}
+
+.text-underlined::before {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.text-underlined::after {
+  right: 50%;
+  transform: translateX(50%);
+}
+
+.text-underlined:hover::before,
+.text-underlined:hover::after {
+  width: 100%;
+  transition-duration: .2s;
+}
+
+.menu__logout {
+  margin-left: auto; /* Move o botão de logout para a direita */
+}
+
+.menu__logo {
+  margin: auto;
+  margin-left: 0;
+}
+
+img {
+  width: 35px;
+  margin-left: 32px;
+  margin-top: 16px;
+}
+
+header {
+  max-width: 100%;
+  left: 0;
+  top: 0;
+}
+
+body{ 
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Open Sans, Ubuntu, Fira Sans, Helvetica Neue, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #546E82;
+}
+
+main{
+  background-color: #546E82;
+  height: 100%;
+  max-width: 75%;
+  align-items: center;
+  margin: auto;
+  margin-top: 15vh;
+}
+
+table{
+  max-width: 100%;
+  margin: auto;
+  background-color: white;
+  box-shadow: rgba(166, 167, 218, 0.35) 0px 5px 15px;
+  text-align: center;
+}
+
+.container{
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+  align-items: center;
+}
+
+h2{
+  text-align: center;
+  font-weight: bold;
+  margin-top: 15vh;
+}
+
+th{
+  text-align: center;
+}

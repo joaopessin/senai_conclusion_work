@@ -18,11 +18,16 @@
                     <li class="menu__logo"><img src="../image/obra360.png" alt="logo_obra_360"></li>
                     <li class="menu__group"><a href="#0" class="menu__link r-link text-underlined">Detalhes</a></li>
                     <li class="menu__group"><a href="timeline.php" class="menu__link r-link text-underlined">Andamento</a></li>
-                    <li class="menu__group"><a href="#0" class="menu__link r-link text-underlined">Funcionários</a></li>
+                    <li class="menu__group"><a href="funcionarios.php" class="menu__link r-link text-underlined">Funcionários</a></li>
                     <li class="menu__group"><a href="#0" class="menu__link r-link text-underlined">Mensagens</a></li>
-                    <li class="menu__group menu__logout"><a href="#0" class="menu__link r-link text-underlined">Sair</a></li>
+                    <li id="logout" class="menu__group menu__logout"><a href="tela_principal_construtora.php" class="menu__link r-link text-underlined">Sair</a></li>
                 </ul>
             </nav>
+            <script>
+                document.getElementById('logout').onclick = function() {
+                    return confirm("Você realmente deseja sair?");
+                }
+            </script>
         </div>
     </header>
 
@@ -63,7 +68,7 @@
 
             <div class="descricao-texto">
                 <p class="branco">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
             </div>
 
 

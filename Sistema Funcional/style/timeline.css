@@ -14,6 +14,11 @@ body {
   padding-bottom: 50px;
 }
 
+.qrcode{
+  width: 50%;
+  height: 50%;
+}
+
 
 /* INTRO SECTION
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -71,6 +76,7 @@ h1 {
   width: 400px;
   padding: 15px;
   background: #B24B38;
+  transition: all 1s ease;
 }
 
 .timeline ul li div::before {
@@ -157,6 +163,10 @@ li div button:hover {
   color: #0F2F4B;
   border: 2px solid #0F2F4B;
   font-weight: 700;
+}
+
+.timeline ul li div:hover{
+  padding: 25px;
 }
 
 
@@ -261,12 +271,14 @@ li div button:hover {
   bottom: 20px;
   display: flex;
   align-items: center;
-  padding: 5px;
   color: black;
   background: rgba(255, 255, 255, 0.65);
+  width: 20%;
+  margin: 0;
 }
 
 .page-footer a {
   display: flex;
-  margin-left: 4px;
+  margin: 0;
+  padding: 0;
 }
