@@ -44,6 +44,7 @@ body{
 
 .side-menu:hover {
   width: 300px;
+  box-shadow: rgb(218, 112, 12) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 
 .side-menu li {
@@ -67,6 +68,7 @@ body{
 .side-menu li:first-child a {
   background: #b24b38;
   display: block;
+  transition: background 0.5s ease;
 }
 
 
@@ -169,7 +171,7 @@ form.example::after {
   align-items: center;
 }
 
-img[src="img/obra360.png"]:hover {
+img[src="../image/obra360.png"]:hover {
   filter: brightness(200%);
   transition: filter 0.5s ease;
 }

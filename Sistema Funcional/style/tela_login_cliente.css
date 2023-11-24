@@ -106,7 +106,7 @@ html, body {
 }
 
 
-img[src="mage/obra360.png"]:hover {
+img[src="../image/obra360.png"]:hover {
   filter: brightness(200%);
   transition: filter 0.5s ease;
 }

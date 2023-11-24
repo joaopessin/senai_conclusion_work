@@ -22,7 +22,7 @@
         <li><a href=""><span class="fa fa-code"><img class="menu-img" src="../image/menu-branco.png" alt="menu barra"></span>Obra 360</a></li>
         <li><a href="#"><span class="fa fa-cog"><img class="menu-info" src="../image/info-branco.png" alt="incone informacao"></span>Sobre nós</a></li>
         <li><a href="../content/cadastro_funcionarios.php"><span class="fa fa-font"><img class="menu-cadastro" src="../image/cadastro-branco.png" alt="incone cadastro"></span>Cadastrar Cliente</a></li>
-        <li><a id="logout" href="../tela_login_construtora.php"><span class="fa fa-check-square"><img class="menu-info" src="../image/sair-branco.png" alt="incone informacao"></span>Sair</a></li>
+        <li><a id="logout" href="tela_login_construtora.php"><span class="fa fa-check-square"><img class="menu-info" src="../image/sair-branco.png" alt="incone informacao"></span>Sair</a></li>
     </ul>
     <script>
         document.getElementById('logout').onclick = function() {
