@@ -130,7 +130,7 @@ form.example::after {
 }
 
 
-.div-obra1 {
+.div-obra {
   width: 20%;
   height: 25%;
   background-color: #0f2f4b;
@@ -142,24 +142,7 @@ form.example::after {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 
-.div-obra1:hover {
-  background-color: #b24b38;
-  transition: background-color 0.5s ease;
-}
-
-.div-obra2 {
-  width: 20%;
-  height: 25%;
-  background-color: #0f2f4b;
-  border-radius: 10px;
-  position: absolute;
-  top: 30%;
-  left: 55%;
-  transform: translate(-50%, -50%);
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-}
-
-.div-obra2:hover {
+.div-obra:hover {
   background-color: #b24b38;
   transition: background-color 0.5s ease;
 }
@@ -256,7 +239,7 @@ img[src="../image/obra360.png"]:hover {
     text-align: center;
   }
 
-  .div-obra1 {
+  .div-obra {
     width: 20%;
     height: 30%;
     background-color: #0f2f4b;
@@ -264,18 +247,6 @@ img[src="../image/obra360.png"]:hover {
     position: absolute;
     top: 30%;
     left: 30%;
-    transform: translate(-50%, -50%);
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-  }
-
-  .div-obra2 {
-    width: 20%;
-    height: 30%;
-    background-color: #0f2f4b;
-    border-radius: 10px;
-    position: absolute;
-    top: 30%;
-    left: 55%;
     transform: translate(-50%, -50%);
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
   }
@@ -294,7 +265,7 @@ img[src="../image/obra360.png"]:hover {
     text-align: center;
   }
 
-  .div-obra1 {
+  .div-obra {
     width: 20%;
     height: 45%;
     margin-top: 8%;
@@ -307,18 +278,6 @@ img[src="../image/obra360.png"]:hover {
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
   }
 
-  .div-obra2 {
-    width: 20%;
-    height: 45%;
-    margin-top: 8%;
-    background-color: #0f2f4b;
-    border-radius: 10px;
-    position: absolute;
-    top: 30%;
-    left: 55%;
-    transform: translate(-50%, -50%);
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-  }
 
 }
 

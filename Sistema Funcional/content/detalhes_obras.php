@@ -1,3 +1,22 @@
+<?php
+    include('../database/conexao.php');
+
+    $query1 = $dbh->prepare('SELECT * 
+    FROM obras;');
+    $query2 = $dbh->prepare('SELECT * 
+    FROM construtora;');
+    
+    $query1->execute();
+    $query2->execute();
+
+    $obras = $query1->fetchAll(PDO::FETCH_ASSOC);
+    $construtoras = $query2->fetchAll(PDO::FETCH_ASSOC);
+
+    // echo '<pre>';
+    // print_r($produtos);
+    // echo '<pre>';
+?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -31,11 +50,13 @@
         </div>
     </header>
 
+ 
+    
     <div class="div-obra1-detalhes">
-
         <h1 class="titulo-obra">OBRA 1</h1>
-
+        
         <div>
+            
             <div class="div-icone-descricao">
                 <img src="../image/message-icon.png" class="m-t">
                 <h2 class="m-l">Descrição geral</h2>
