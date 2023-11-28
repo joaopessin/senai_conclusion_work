@@ -1,3 +1,15 @@
+<?php
+    include('../database/conexao.php');
+
+    $query = $dbh -> prepare('SELECT * FROM etapas;');
+    $query -> execute();
+    $etapas = $query -> fetchAll(PDO::FETCH_ASSOC);
+
+    // echo '<pre>';
+    // print_r($produtos);
+    // echo '<pre>';
+?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -6,7 +18,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="../style/timeline.css">
-  <link rel="stylesheet" href="../style/menu_obra.css">
 
 </head>
 
@@ -39,25 +50,18 @@
 
   <section class="timeline">
     <ul>
-      <li>
-        <div>
-          <time>Terraplanagem</time> At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
-          <br>
+      <?php
+        foreach ($etapas as $etapa) {
+          echo '<li>';
+            echo '<div>';
+              echo '<time>'.$etapa['nome_etapa'].'</time>'.$etapa['descricao_etapa'];
+              echo '<br>';
+              echo '<button type="submit">Detalhes</button>';
+            echo '</div>';
+          echo '</li>';
+        }
+      ?>
 
-          <button type="submit">Detalhes</button>
-        </div>
-
-      </li>
-
-      <li>
-        <div>
-          <time>Terraplanagem</time> At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
-          <br>
-
-          <button type="submit">Detalhes</button>
-        </div>
-
-      </li>
 
 
 
@@ -70,9 +74,7 @@
     </a>
   </footer>
 
-  <script src="../script/timeline.js">
-
-  </script>
+  <script src="../script/timeline.js"></script>
 </body>
 
 </html>
