@@ -57,44 +57,41 @@
 
 
     <!------ Conteudo Obras -------->
+    <?php
+        foreach($obras as $obra){
+            if(isset($obra)) {
+                echo '<a href="detalhes_obras.php?id_obra='.$obra['id_obra'].'">';
+    
+                echo '<div class="div-obra">';
+                echo '<h2 class="branco conteudo-div-obra">'.$obra['nome_obra'].'</h2>';
+                echo '<p class="branco conteudo-div-obra">Etapa atual</p>';
+                echo '<p class="branco conteudo-div-obra">Progresso:</p>';
+    
+                echo '<div class="container">';
+                echo '<input type="radio" class="radio" name="progress" value="five" id="five">';
+                echo '<label for="five" class="label">5%</label>';
+                echo '<input type="radio" class="radio" name="progress" value="twentyfive" id="twentyfive" checked>';
+                echo '<label for="twentyfive" class="label">25%</label>';
+                echo '<input type="radio" class="radio" name="progress" value="fifty" id="fifty">';
+                echo '<label for="fifty" class="label">50%</label>';
+                echo '<input type="radio" class="radio" name="progress" value="seventyfive" id="seventyfive">';
+                echo '<label for="seventyfive" class="label">75%</label>';
+                echo '<input type="radio" class="radio" name="progress" value="onehundred" id="onehundred">';
+                echo '<label for="onehundred" class="label">100%</label>';
+    
+                echo '<div class="progress">';
+                echo '<div class="progress-bar"></div>';
+                echo '</div>';
+                echo '</div>';
+                echo '</div>';
+                echo '</a>';
+            } else { echo 'Obras não cadastrada!'; }
+        }
+    ?>
+
+    <!-- <a href="detalhes_obras.php?id_obra="> -->
 
     
-
-    <?php
-        foreach($obras as $obra) { echo '<a href="detalhes_obras.php?id_obra='.$obra['id_obra'].'">'; }
-    ?>
-    <!-- <a href="detalhes_obras.php?id_obra="> -->
-        <div class="div-obra">
-            <?php
-                foreach($obras as $obra) { echo '<h2 class="branco conteudo-div-obra">'.$obra['nome_obra'].'</h2>'; }
-            ?>
-
-            <p class="branco conteudo-div-obra">Etapa atual</p>
-            <p class="branco conteudo-div-obra">Progresso:</p>
-            <div class="container">
-                <input type="radio" class="radio" name="progress" value="five" id="five">
-                <label for="five" class="label">5%</label>
-
-                <input type="radio" class="radio" name="progress" value="twentyfive" id="twentyfive" checked>
-                <label for="twentyfive" class="label">25%</label>
-
-                <input type="radio" class="radio" name="progress" value="fifty" id="fifty">
-                <label for="fifty" class="label">50%</label>
-
-                <input type="radio" class="radio" name="progress" value="seventyfive" id="seventyfive">
-                <label for="seventyfive" class="label">75%</label>
-
-                <input type="radio" class="radio" name="progress" value="onehundred" id="onehundred">
-                <label for="onehundred" class="label">100%</label>
-
-                <div class="progress">
-                    <div class="progress-bar"></div>
-                </div>
-            </div>
-        </div>
-    </a>
-
-
 
 </body>
 

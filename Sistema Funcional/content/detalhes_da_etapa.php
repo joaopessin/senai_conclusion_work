@@ -117,6 +117,7 @@
       </div>
     </div>
 
+
     <script src="../script/detalhes_da_etapa.js"></script>
   </body>
 </html>
