@@ -1,14 +1,22 @@
 <?php
-    include('../database/conexao.php');
+include('../database/conexao.php');
 
-    $query = $dbh -> prepare('SELECT id_obra, nome_obra FROM obras;');
-    $query -> execute();
-    $obras = $query -> fetchAll(PDO::FETCH_ASSOC);
+$query = $dbh->prepare('SELECT id_obra, nome_obra, descricao_obra, endereco_obra 
+    FROM obras;');
 
-    // echo '<pre>';
-    // print_r($produtos);
-    // echo '<pre>';
+$query->execute();
+
+$obras = $query->fetchAll();
+
+
+
+$query2 = $dbh->prepare('SELECT id_obra FROM obras GROUP BY id_obra;');
+$query2->execute();
+
+$totalObras = $query2->fetchAll();
 ?>
+
+
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -23,25 +31,26 @@
 
 <body>
 
-    <!------ logo do obra360 ------->
-    <div class="logo-principal">
-        <a href="loginFuncionario.php"><img src="../image/obra360.png" alt="Logo do Obra360" width="100" height="100"></a>
-    </div>
+    <header>
+        <!------ logo do obra360 ------->
+        <div class="logo-principal">
+            <a href="loginFuncionario.php"><img src="../image/obra360.png" alt="Logo do Obra360" width="100" height="100"></a>
+        </div>
 
-    <!-------- Menu lateral --------->
+        <!-------- Menu lateral --------->
 
-    <ul class="side-menu">
-        <li><a href=""><span class="fa fa-code"><img class="menu-img" src="../image/menu-branco.png" alt="menu barra"></span>Obra 360</a></li>
-        <li><a href="#"><span class="fa fa-cog"><img class="menu-info" src="../image/info-branco.png" alt="incone informacao"></span>Sobre nós</a></li>
-        <li><a href="../content/cadastro_funcionarios.php"><span class="fa fa-font"><img class="menu-cadastro" src="../image/cadastro-branco.png" alt="incone cadastro"></span>Cadastrar Cliente</a></li>
-        <li><a id="logout" href="tela_login_construtora.php"><span class="fa fa-check-square"><img class="menu-info" src="../image/sair-branco.png" alt="incone informacao"></span>Sair</a></li>
-    </ul>
-    <script>
-        document.getElementById('logout').onclick = function() {
-            return confirm("Você realmente deseja sair?");
-        }
-    </script>
-
+        <ul class="side-menu">
+            <li><a href=""><span class="fa fa-code"><img class="menu-img" src="../image/menu-branco.png" alt="menu barra"></span>Obra 360</a></li>
+            <li><a href="detalhes_obras.php"><span class="fa fa-cog"><img class="menu-info" src="../image/info-branco.png" alt="incone informacao"></span>Sobre nós</a></li>
+            <li><a href="../content/cadastro_clientes.php"><span class="fa fa-font"><img class="menu-cadastro" src="../image/cadastro-branco.png" alt="incone cadastro"></span>Cadastrar Cliente</a></li>
+            <li><a id="logout" href="tela_login_construtora.php"><span class="fa fa-check-square"><img class="menu-info" src="../image/sair-branco.png" alt="incone informacao"></span>Sair</a></li>
+        </ul>
+        <script>
+            document.getElementById('logout').onclick = function() {
+                return confirm("Você realmente deseja sair?");
+            }
+        </script>
+    </header>
 
     <!----- Barra de pesquisa ------->
 
@@ -51,49 +60,114 @@
         </form>
     </div>
 
-    <div class="div-add-obra">
-        <a href="cadastro_detalhes.php"><img class="add-obra" src="../image/add-branco.png" alt="adicionar"></a>
+    <div class="btns">
+        <div class="div-add-obra">
+            <a href="cadastro_detalhes.php"><img class="add-obra" src="../image/add-branco.png" alt="adicionar"></a>
+        </div>
+
+
     </div>
+
 
 
     <!------ Conteudo Obras -------->
 
-    
+
+
 
     <?php
-        foreach($obras as $obra) { echo '<a href="detalhes_obras.php?id_obra='.$obra['id_obra'].'">'; }
+    foreach ($obras as $obra) {
+        if (isset($obra)) {
+            echo '<a href="detalhes_obras.php?idObra=' . $obra['id_obra'] . '">';
+
+            echo '<div class="div-obra' . $obra['id_obra'] . '">';
+            echo '<div class="icons">';
+            echo '<a onclick="return alertarDelet();" href="delete_obra.php?idObra=' . $obra['id_obra'] . '"><img src="../image/icon-deletar-obra.png" alt="Ícone 1" class="icon"></a>';
+
+            echo '<a onclick="return alertarEdit();" href="delete_obra.php?idObra=' . $obra['id_obra'] . '"><img src="../image/edit-obra.png" alt="Ícone 2" class="icon"></a>';
+            echo '</div>';
+
+            echo '<h2 class="branco conteudo-div-obra">' . $obra['nome_obra'] . '</h2>';
+            echo '<p class="branco conteudo-div-obra">Etapa atual</p>';
+            echo '<p class="branco conteudo-div-obra">Progresso:</p>';
+
+            echo '<div class="container">';
+            echo '<input type="radio" class="radio name="progress" value="five" id="five">';
+            echo '<label for="five" class="label">5%</label>';
+            echo '<input type="radio" class="radio" name="progress" value="twentyfive" id="twentyfive" checked>';
+            echo '<label for="twentyfive" class="label">25%</label>';
+            echo '<input type="radio" class="radio" name="progress" value="fifty" id="fifty">';
+            echo '<label for="fifty" class="label">50%</label>';
+            echo '<input type="radio" class="radio" name="progress" value="seventyfive" id="seventyfive">';
+            echo '<label for="seventyfive" class="label">75%</label>';
+            echo '<input type="radio" class="radio" name="progress" value="onehundred" id="onehundred">';
+            echo '<label for="onehundred" class="label">100%</label>';
+
+            echo '<div class="progress">';
+            echo '<div class="progress-bar"></div>';
+            echo '</div>';
+            echo '</div>';
+            echo '</div>';
+            echo '</a>';
+        } else {
+            echo 'Obras não cadastrada!';
+        }
+    }
+
     ?>
-    <!-- <a href="detalhes_obras.php?id_obra="> -->
-        <div class="div-obra">
-            <?php
-                foreach($obras as $obra) { echo '<h2 class="branco conteudo-div-obra">'.$obra['nome_obra'].'</h2>'; }
-            ?>
 
-            <p class="branco conteudo-div-obra">Etapa atual</p>
-            <p class="branco conteudo-div-obra">Progresso:</p>
-            <div class="container">
-                <input type="radio" class="radio" name="progress" value="five" id="five">
-                <label for="five" class="label">5%</label>
+    <script>
+        function alertarDelet() {
+            var resposta = confirm("Você realmente deseja excluir a obra?");
+            if (resposta) {
+                // O usuário clicou em "OK"
+                header('Location: tela_principal_construtora.php');
+                alert("Você excluiu essa obra!");
+            } else {
+                // O usuário clicou em "Cancelar"
+                alert("Você não excluiu essa obra!");
+            }
+            return false; // Isso impede que o navegador siga o link
+        }
+    </script>
 
-                <input type="radio" class="radio" name="progress" value="twentyfive" id="twentyfive" checked>
-                <label for="twentyfive" class="label">25%</label>
+    <script>
+        function alertarEdit() {
+            var resposta = confirm("Você realmente deseja editar a obra?");
+            if (resposta) {
+                // O usuário clicou em "OK"
+                alert("indo para a tela de editar");
+            } else {
+                // O usuário clicou em "Cancelar"
+                alert("Você não editou essa obra!");
+            }
+            return false; // Isso impede que o navegador siga o link
+        }
+    </script>
 
-                <input type="radio" class="radio" name="progress" value="fifty" id="fifty">
-                <label for="fifty" class="label">50%</label>
 
-                <input type="radio" class="radio" name="progress" value="seventyfive" id="seventyfive">
-                <label for="seventyfive" class="label">75%</label>
 
-                <input type="radio" class="radio" name="progress" value="onehundred" id="onehundred">
-                <label for="onehundred" class="label">100%</label>
 
-                <div class="progress">
-                    <div class="progress-bar"></div>
-                </div>
-            </div>
-        </div>
-    </a>
 
+
+
+
+    <?php
+
+    for ($obraE = 1; $obraE < 12; $obraE++) {
+        echo '<a href="detalhes_obras.php?idObra=' . $obraE . '">';
+        $cont = 0;
+        foreach ($totalObras as $linha) {
+            //print_r($linha);
+            if ($linha['id_obra'] == $obraE) {
+                $cont++;
+            }
+        }
+    }
+    ?>
+
+
+    
 
 
 </body>

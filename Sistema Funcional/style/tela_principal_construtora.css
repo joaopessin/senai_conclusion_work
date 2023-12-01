@@ -18,6 +18,21 @@ body{
 }
 
 
+/*-------------- Deletar e Editar ------------*/
+.icons {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.icon {
+  height: 30px;
+  width: 30px;
+  margin-right: 10px;
+  background-color: transparent;
+  border: none
+}
+
 
 
 
@@ -122,15 +137,29 @@ form.example::after {
   display: flex;
   justify-content: center;
   align-items: center;
+ 
+}
+
+
+
+
+.btns {
+ width: 10%;
+ height: 10%;
+ margin-top: 35%;
+ margin-left: 80%;
 }
 
 .div-add-obra:hover {
   background-color: #b24b38;
   transition: background-color 0.5s ease;
+  box-shadow: rgb(253, 114, 0) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  transition: box-shadow 0.5s ease;
 }
 
 
-.div-obra {
+
+.div-obra1 {
   width: 20%;
   height: 25%;
   background-color: #0f2f4b;
@@ -140,11 +169,53 @@ form.example::after {
   left: 30%;
   transform: translate(-50%, -50%);
   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  transition: background-color 0.5s ease;
 }
 
-.div-obra:hover {
+.div-obra1:hover {
   background-color: #b24b38;
   transition: background-color 0.5s ease;
+  box-shadow: rgba(255, 255, 255, 0.342) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  
+}
+
+.div-obra2 {
+  width: 20%;
+  height: 25%;
+  background-color: #0f2f4b;
+  border-radius: 10px;
+  position: absolute;
+  top: 30%;
+  left: 55%;
+  transform: translate(-50%, -50%);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  transition: background-color 0.5s ease;
+}
+
+.div-obra2:hover {
+  background-color: #b24b38;
+  transition: background-color 0.5s ease;
+  box-shadow: rgba(255, 255, 255, 0.342) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+
+.div-obra3 {
+  width: 20%;
+  height: 25%;
+  background-color: #0f2f4b;
+  border-radius: 10px;
+  position: absolute;
+  top: 30%;
+  left: 80%;
+  transform: translate(-50%, -50%);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  transition: background-color 0.5s ease;
+}
+
+.div-obra3:hover {
+  background-color: #b24b38;
+  transition: background-color 0.5s ease;
+  box-shadow: rgba(255, 255, 255, 0.342) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 
 .conteudo-div-obra{
@@ -158,6 +229,7 @@ img[src="../image/obra360.png"]:hover {
   filter: brightness(200%);
   transition: filter 0.5s ease;
 }
+
 
 
 
@@ -239,7 +311,7 @@ img[src="../image/obra360.png"]:hover {
     text-align: center;
   }
 
-  .div-obra {
+  .div-obra1 {
     width: 20%;
     height: 30%;
     background-color: #0f2f4b;
@@ -249,6 +321,31 @@ img[src="../image/obra360.png"]:hover {
     left: 30%;
     transform: translate(-50%, -50%);
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  }
+
+  .div-obra2 {
+    width: 20%;
+    height: 30%;
+    background-color: #0f2f4b;
+    border-radius: 10px;
+    position: absolute;
+    top: 30%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  }
+
+  .div-obra3 {
+    width: 20%;
+    height: 30%;
+    background-color: #0f2f4b;
+    border-radius: 10px;
+    position: absolute;
+    top: 30%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    transition: background-color 0.5s ease;
   }
   
 }
@@ -265,7 +362,7 @@ img[src="../image/obra360.png"]:hover {
     text-align: center;
   }
 
-  .div-obra {
+  .div-obra1 {
     width: 20%;
     height: 45%;
     margin-top: 8%;
@@ -278,6 +375,31 @@ img[src="../image/obra360.png"]:hover {
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
   }
 
+  .div-obra2 {
+    width: 20%;
+    height: 45%;
+    margin-top: 8%;
+    background-color: #0f2f4b;
+    border-radius: 10px;
+    position: absolute;
+    top: 30%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  }
+
+  .div-obra3 {
+  width: 20%;
+  height: 25%;
+  background-color: #0f2f4b;
+  border-radius: 10px;
+  position: absolute;
+  top: 30%;
+  left: 80%;
+  transform: translate(-50%, -50%);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  transition: background-color 0.5s ease;
+}
 
 }
 

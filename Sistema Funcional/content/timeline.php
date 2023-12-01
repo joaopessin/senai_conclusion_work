@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="../style/timeline.css">
-
+  <link rel="stylesheet" href="../style/menu_obra.css">
 </head>
 
 <body>
@@ -29,7 +29,7 @@
           <li class="menu__logo"><img src="../image/obra360.png" alt="logo_obra_360"></li>
           <li class="menu__group"><a href="detalhes_obras.php" class="menu__link r-link text-underlined">Detalhes</a></li>
           <li class="menu__group"><a href="#0" class="menu__link r-link text-underlined">Andamento</a></li>
-          <li class="menu__group"><a href="#0" class="menu__link r-link text-underlined">Funcionários</a></li>
+          <li class="menu__group"><a href="funcionarios.php" class="menu__link r-link text-underlined">Funcionários</a></li>
           <li class="menu__group"><a href="#0" class="menu__link r-link text-underlined">Mensagens</a></li>
           <li id="logout" class="menu__group menu__logout"><a href="tela_principal_construtora.php" class="menu__link r-link text-underlined">Sair</a></li>
         </ul>
