@@ -43,6 +43,7 @@ $totalObras = $query2->fetchAll();
             <li><a href=""><span class="fa fa-code"><img class="menu-img" src="../image/menu-branco.png" alt="menu barra"></span>Obra 360</a></li>
             <li><a href="detalhes_obras.php"><span class="fa fa-cog"><img class="menu-info" src="../image/info-branco.png" alt="incone informacao"></span>Sobre nós</a></li>
             <li><a href="../content/cadastro_clientes.php"><span class="fa fa-font"><img class="menu-cadastro" src="../image/cadastro-branco.png" alt="incone cadastro"></span>Cadastrar Cliente</a></li>
+            <li><a href="../content/cadastro_funcionarios.php"><span class="fa fa-font"><img class="menu-cadastro" src="../image/icon-funcionario.png" alt="incone cadastro"></span>Cadastrar Funcionarios</a></li>
             <li><a id="logout" href="tela_login_construtora.php"><span class="fa fa-check-square"><img class="menu-info" src="../image/sair-branco.png" alt="incone informacao"></span>Sair</a></li>
         </ul>
         <script>
@@ -82,9 +83,9 @@ $totalObras = $query2->fetchAll();
 
             echo '<div class="div-obra' . $obra['id_obra'] . '">';
             echo '<div class="icons">';
-            echo '<a onclick="return alertarDelet();" href="delete_obra.php?idObra=' . $obra['id_obra'] . '"><img src="../image/icon-deletar-obra.png" alt="Ícone 1" class="icon"></a>';
+            echo '<bottom onclick="return alertarDelet();" href="delete_obra.php?idObra=' . $obra['id_obra'] . '"><img src="../image/icon-deletar-obra.png" alt="Ícone 1" class="icon"></bottom>';
 
-            echo '<a onclick="return alertarEdit();" href="delete_obra.php?idObra=' . $obra['id_obra'] . '"><img src="../image/edit-obra.png" alt="Ícone 2" class="icon"></a>';
+            echo '<bottom onclick="return alertarEdit();" href="delete_obra.php?idObra=' . $obra['id_obra'] . '"><img src="../image/edit-obra.png" alt="Ícone 2" class="icon"></bottom>';
             echo '</div>';
 
             echo '<h2 class="branco conteudo-div-obra">' . $obra['nome_obra'] . '</h2>';
@@ -118,7 +119,7 @@ $totalObras = $query2->fetchAll();
 
     <script>
         function alertarDelet() {
-            var resposta = confirm("Você realmente deseja excluir a obra?");
+            var resposta = confirm("Veja as informações da obra antes de deletar!");
             if (resposta) {
                 // O usuário clicou em "OK"
                 header('Location: tela_principal_construtora.php');
@@ -133,9 +134,10 @@ $totalObras = $query2->fetchAll();
 
     <script>
         function alertarEdit() {
-            var resposta = confirm("Você realmente deseja editar a obra?");
+            var resposta = confirm("Veja as informações da obra antes de atualizar!");
             if (resposta) {
                 // O usuário clicou em "OK"
+                header('Location: tela_principal_construtora.php');
                 alert("indo para a tela de editar");
             } else {
                 // O usuário clicou em "Cancelar"

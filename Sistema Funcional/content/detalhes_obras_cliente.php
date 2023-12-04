@@ -70,11 +70,6 @@ $obras = $query->fetchAll();
         echo '</div>';
 
         echo '</div>';
-        echo '<div class="icons2">';
-        echo '<a onclick="return alertarDelet();" href="delete_obra.php?idObra=' . $obra['id_obra'] . '"><img src="../image/icon-deletar-obra.png" alt="Ícone 1" class="icon2"></a>';
-
-        echo '<a onclick="return alertarEdit();" href="atualizar_detalhes.php?idObra=' . $obra['id_obra'] . '"><img src="../image/edit-obra.png" alt="Ícone 2" class="icon2"></a>';
-        echo '</div>';
         echo '</div>';
     }
     ?>

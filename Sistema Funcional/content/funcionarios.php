@@ -1,3 +1,16 @@
+<?php
+    include('../database/conexao.php');
+    $query = $dbh->prepare('SELECT id_funcionario, nome_funcionario, cargo_funcionario FROM funcionarios;');
+    
+    $query->execute();
+
+    $funcionarios = $query->fetchAll();
+
+    // echo '<pre>';
+    // print_r($produtos);
+    // echo '<pre>';
+?>
+
 <!DOCTYPE html>
 <html lang="PT-br">
 
@@ -16,7 +29,7 @@
       <div class="page">
         <nav class="page__menu menu">
           <ul class="menu__list r-list">
-            <li class="menu__logo"><img src="image/logo.png" alt="logo_obra_360"></li>
+            <li class="menu__logo"><img src="../image/obra360.png" alt="logo_obra_360"></li>
             <li class="menu__group"><a href="detalhes_obras.php" class="menu__link r-link text-underlined">Detalhes</a></li>
             <li class="menu__group"><a href="timeline.php" class="menu__link r-link text-underlined">Andamento</a></li>
             <li class="menu__group"><a href="funcionarios.php" class="menu__link r-link text-underlined">Funcionários</a></li>
@@ -47,27 +60,17 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>Roger Dariva Vogas Menezes</td>
-            <td>Encarregado de Obra</td>
-            <td><a href="">Alterar</a></td>
-            <td><a href="">Remover</a></td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>Joao Vitor Pessin Santos</td>
-            <td>Pedreiro</td>
-            <td><a href="">Alterar</a></td>
-            <td><a href="">Remover</a></td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td>Laysson Batista</td>
-            <td>Ajudante de Pedreiro</td>
-            <td><a href="">Alterar</a></td>
-            <td><a href="">Remover</a></td>
-          </tr>
+          <?php
+          foreach ($funcionarios as $funcionario) {
+            echo '<tr>';
+            echo '<td>' . $funcionario['id_funcionario'] . '</td>';
+            echo '<td>' . $funcionario['nome_funcionario'] . '</td>';
+            echo '<td>' . $funcionario['cargo_funcionario'] . '</td>';
+            echo '<td><a href="edit_produto.php?idFuncionario=' . $funcionario['id_funcionario'] . '">Editar</a></td>';
+            echo '<td><a href="delete_produto.php?idProduto=' . $funcionario['id_funcionario'] . '">Deletar</a></td>';
+            echo '</tr>';
+          }
+          ?>
         </tbody>
       </table>
     </main>

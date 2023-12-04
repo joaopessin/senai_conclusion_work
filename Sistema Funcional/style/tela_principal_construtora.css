@@ -59,7 +59,7 @@ body{
 
 .side-menu:hover {
   width: 300px;
-  box-shadow: rgb(218, 112, 12) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  box-shadow: rgb(178, 75, 56) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 
 .side-menu li {
@@ -153,7 +153,7 @@ form.example::after {
 .div-add-obra:hover {
   background-color: #b24b38;
   transition: background-color 0.5s ease;
-  box-shadow: rgb(253, 114, 0) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  box-shadow: rgb(178, 75, 56) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
   transition: box-shadow 0.5s ease;
 }
 

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulário de Cadastro</title>
 
-    <link rel="stylesheet" href="./style/cadastro_funcionarios.css">
+    <link rel="stylesheet" href="../style/cadastro_funcionarios.css">
   </head>
   <body>
 
@@ -13,15 +13,15 @@
         <div class="form-container">
         <h2>Cadastro de Funcionário</h2>
 
-        <form>
+        <form action="insert_funcionarios.php" method="post">
           <div class="form-group">
             <label for="nome">Nome Completo</label>
-            <input type="text" id="nome" name="nome" required>
+            <input type="text" id="nome" name="nome_funcionario" required>
           </div>
 
           <div class="form-group">
             <label for="mensagem">Cargo</label>
-            <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+            <input  type="text" id="mensagem" name="cargo_funcionario" rows="4" required></textarea>
           </div>
 
           <div class="form-group">
@@ -35,7 +35,7 @@
       </div>
 
       <div class="img-container">
-             <img src="image\logo.png" alt="">    
+             <img src="../image/obra360.png" alt="">    
       </div>
 
     </div>

@@ -32,8 +32,8 @@
         </div>
 
         <div class="form-group">
-          <button onclick="return alertar();" type="submit"><a href="insert_detalhes.php">Avançar</a></button>
-          
+          <button onclick="return alertar();" type="submit">Avançar</a></button>
+
           <button><a href="tela_principal_construtora.php">Cancelar</a></button>
           
         </div>

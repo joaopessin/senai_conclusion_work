@@ -171,10 +171,6 @@ position: relative;
 float: left;
 }
 
-.display_none_add {
-  
-}
-
 .cont_princ_lists {
   position: relative;
   float: left;
@@ -278,13 +274,11 @@ opacity: 1;
   width: 100%;
 list-style-type: none;
 }
-.col_md_3_list > .cont_btns_options > ul > li:nth-child(1) > a {
-/*   background-color: #ef5350; */
-}
+
 .col_md_3_list > .cont_btns_options > ul > li > a {
   display: block;
-  width: 20px;
-  height: 15px;
+  width: 30px;
+  height: 25px;
   background-color: #4C75A1;
   padding: 5px 3px;
   border-radius: 50%;

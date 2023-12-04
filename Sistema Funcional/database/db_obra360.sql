@@ -11,14 +11,16 @@ senha_func_const CHAR(155) NOT NULL
 
 CREATE TABLE clientes (
 id_cliente INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+nome_cliente VARCHAR(155),
+cpf_cliente VARCHAR(155),
+telefone_cliente VARCHAR(155),
 email_cliente CHAR(100) NOT NULL,
 senha_cliente CHAR(155) NOT NULL
 );
 
 INSERT INTO funcionarios_construtora (email_func_const, senha_func_const) VALUES ('layson@gmail.com','123');
 INSERT INTO clientes (email_cliente, senha_cliente) VALUES ('felipe@gmail.com','321');
-SELECT * from funcionarios_construtora;
-SELECT * from clientes;
+
 
 CREATE TABLE obras (
 id_obra INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
@@ -41,6 +43,7 @@ descricao_etapa VARCHAR(1000) NOT NULL,
 duracao VARCHAR(50) NOT NULL,
 periodicidade_atualizacao VARCHAR(50) NOT NULL
 );
+
 
 CREATE TABLE atualizacoes(
 id_atualizacao INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
