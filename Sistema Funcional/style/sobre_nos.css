@@ -1,0 +1,206 @@
+body{
+  background-color: #576e81;
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Open Sans, Ubuntu, Fira Sans, Helvetica Neue, sans-serif !important;
+}
+
+.titulo-obra{
+  color: #0F2F4B;
+  margin-left: 5%;
+  transition: color 0.5s ease;
+}
+
+.titulo-obra2{
+  color: #0F2F4B;
+  margin-left: 10%;
+  margin-bottom: 5%;
+  transition: color 0.5s ease;
+  
+}
+
+
+
+.titulo-sobre{
+  color: white;
+  margin-left: 5%;
+  transition: color 0.5s ease;
+}
+
+
+
+.azul{
+  color: #325777;
+}
+.descricao-geral{
+  color: #0F2F4B;
+  display: flex;
+  align-items: center;
+  margin-left: 1%;
+  width: 80%;
+  display: block;
+  align-items: center;
+}
+
+
+
+
+.branco{
+  color: white;
+}
+
+.descricao{
+  margin-left: 3%;
+}
+
+
+
+.div-obra1-detalhes {
+    width: 35%;
+    height: 50%;
+    background-color: #889AA8;
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 28%;
+    transform: translate(-50%, -50%);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  }
+
+  .div-obra1-detalhes:hover {
+    box-shadow: rgb(178, 75, 56) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    transition: box-shadow 0.5s ease;
+    .titulo-obra{
+      color: white;
+      margin-left: 5%;
+      transition: background-color 0.5s ease;
+      transition: color 0.5s ease;
+    }
+    .div-icone-descricao{
+      width: 60%;
+      display: flex;
+      color: white;
+      align-items: center;
+      transition: color 0.5s ease;
+    }
+    .div-icone-local-obra{
+      width: 60%;
+      display: flex;
+      color: white;
+      align-items: center;
+      transition: color 0.5s ease;
+      margin-top: 15%;
+    }
+  }
+
+
+
+.descricao-texto{
+  margin-left: 5%;
+}
+
+
+
+
+
+.div-sobre {
+  width: 35%;
+  height: 50%;
+  border-radius: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: rgba(216, 212, 210, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.div-sobre:hover {
+  box-shadow: rgb(194, 193, 192) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  transition: box-shadow 0.5s ease;
+  .titulo-sobre{
+    color: #0F2F4B;
+    margin-left: 5%;
+    transition: background-color 0.5s ease;
+    transition: color 0.5s ease;
+  }
+  .div-icone-sobre{
+    width: 60%;
+    display: flex;
+    color: #0F2F4B;
+    align-items: center;
+    transition: color 0.5s ease;
+  }
+  .div-icone-local-construtora{
+    width: 60%;
+    display: flex;
+    color: #0F2F4B;
+    align-items: center;
+    transition: color 0.5s ease;
+  }
+  
+}
+
+
+
+
+/* ------------ icones ---------- */
+
+.div-icone-descricao{
+  width: 60%;
+  display: flex;
+  color: #0F2F4B;
+  align-items: center;
+  transition: color 0.5s ease;
+}
+.div-icone-sobre{
+  width: 60%;
+  display: flex;
+  color: white;
+  align-items: center;
+  transition: color 0.5s ease;
+}
+
+.div-icone-local-construtora{
+  width: 60%;
+  display: flex;
+  color: white;
+  align-items: center;
+  transition: color 0.5s ease;
+  margin-top: 15%;
+}
+
+.div-icone-local-obra{
+  width: 60%;
+  display: flex;
+  color: #0F2F4B;
+  align-items: center;
+  transition: color 0.5s ease;
+  margin-top: 15%;
+}
+.m-l{
+  margin-left: 5%;
+}
+
+.m-t{margin-top: 3%;
+}
+
+
+.icons2 {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.icon2 {
+  height: 30px;
+  width: 30px;
+  margin-right: 10px;
+  background-color: transparent;
+  border: none
+}
+
+
+img[src="../image/icon-deletar-obra.png"]:hover {
+  filter: brightness(2000%);
+  transition: filter 0.5s ease;
+}

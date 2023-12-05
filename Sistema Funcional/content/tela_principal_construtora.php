@@ -27,21 +27,38 @@ $totalObras = $query2->fetchAll();
     <title>Tela Principal</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="../style/tela_principal_construtora.css">
+
+    <link rel="shortcut icon" href="../image/favicon.ico" type="image/x-icon">
 </head>
 
 <body>
 
     <header>
-        <!------ logo do obra360 ------->
-        <div class="logo-principal">
-            <a href="loginFuncionario.php"><img src="../image/obra360.png" alt="Logo do Obra360" width="100" height="100"></a>
+        <div class="page">
+            <nav class="page__menu menu">
+                <ul class="menu__list r-list">
+                    <li id="logout" class="menu__group menu__logout"><a href="tela_principal_construtora.php" class="menu__link r-link text-underlined">Sair</a></li>
+                    
+                    <!-----Nome e logo------>
+                    <li id="logout" class="menu__logo" style="display: flex; justify-content: space-between; align-items: center;">
+                        <h2 class="laranja suaClasse">Obra360</h2>
+                        <img class="suaClasse" src="../image/obra360.png" alt="Logo do Obra360" width="100" height="100">
+                    </li>
+                </ul>
+            </nav>
+            <script>
+                document.getElementById('logout').onclick = function() {
+                    return confirm("Você realmente deseja sair?");
+                }
+            </script>
         </div>
+
 
         <!-------- Menu lateral --------->
 
         <ul class="side-menu">
             <li><a href=""><span class="fa fa-code"><img class="menu-img" src="../image/menu-branco.png" alt="menu barra"></span>Obra 360</a></li>
-            <li><a href="detalhes_obras.php"><span class="fa fa-cog"><img class="menu-info" src="../image/info-branco.png" alt="incone informacao"></span>Sobre nós</a></li>
+            <li><a href="sobre_nos.php"><span class="fa fa-cog"><img class="menu-info" src="../image/info-branco.png" alt="incone informacao"></span>Sobre nós</a></li>
             <li><a href="../content/cadastro_clientes.php"><span class="fa fa-font"><img class="menu-cadastro" src="../image/cadastro-branco.png" alt="incone cadastro"></span>Cadastrar Cliente</a></li>
             <li><a href="../content/cadastro_funcionarios.php"><span class="fa fa-font"><img class="menu-cadastro" src="../image/icon-funcionario.png" alt="incone cadastro"></span>Cadastrar Funcionarios</a></li>
             <li><a id="logout" href="tela_login_construtora.php"><span class="fa fa-check-square"><img class="menu-info" src="../image/sair-branco.png" alt="incone informacao"></span>Sair</a></li>
@@ -55,15 +72,15 @@ $totalObras = $query2->fetchAll();
 
     <!----- Barra de pesquisa ------->
 
-    <div class="pesquisa">
+    <!--<div class="pesquisa">
         <form class="example">
             <input type="text" placeholder="Pesquisa..." name="search">
         </form>
-    </div>
+    </div>-->
 
     <div class="btns">
         <div class="div-add-obra">
-            <a href="cadastro_detalhes.php"><img class="add-obra" src="../image/add-branco.png" alt="adicionar"></a>
+            <a href="cadastro_detalhes.php"><img class="add-obra suaClasse" src="../image/add-branco.png" alt="adicionar"></a>
         </div>
 
 
@@ -169,7 +186,7 @@ $totalObras = $query2->fetchAll();
     ?>
 
 
-    
+
 
 
 </body>

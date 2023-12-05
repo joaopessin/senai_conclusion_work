@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Formulário de Cadastro</title>
+  <link rel="shortcut icon" href="../image/favicon.ico" type="image/x-icon">
 
   <link rel="stylesheet" href="../style/cadastro_clientes.css">
 </head>
@@ -41,7 +42,7 @@
       </div>
 
       <div class="form-group">
-        <button onclick="return alertar();" type="submit"><a href="insert_clientes.php">Cadastrar</a></button>
+        <button onclick="return alertar();" type="submit">Cadastrar</a></button>
         <button><a href="tela_principal_construtora.php">Cancelar</a></button>
       </div>
     </form>
@@ -49,6 +50,7 @@
     <script>
       function alertar() {
         alert('Cliente cadastrado!');
+        header('Location: cadastro_detalhes.php');
       }
     </script>
 

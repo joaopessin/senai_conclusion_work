@@ -16,6 +16,10 @@ body{
 .branco{
   color: white;
 }
+.laranja{
+  color: #b24b38;
+  margin-left: 10%;
+}
 
 
 /*-------------- Deletar e Editar ------------*/
@@ -44,11 +48,10 @@ body{
 .side-menu {
   font-family: 'Roboto', sans-serif;
   position: fixed;
-  top: 15%;
   left: 0;
   margin: 0;
   padding: 0;
-  height: 70%;
+  height: 78%;
   width: 60px;
   list-style-type: none;
   background: #0f2f4b;
@@ -146,15 +149,15 @@ form.example::after {
 .btns {
  width: 10%;
  height: 10%;
- margin-top: 35%;
+ margin-top: 39%;
  margin-left: 80%;
 }
 
 .div-add-obra:hover {
   background-color: #b24b38;
   transition: background-color 0.5s ease;
-  box-shadow: rgb(178, 75, 56) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-  transition: box-shadow 0.5s ease;
+  box-shadow: rgb(255, 255, 255) 0px 0px 0px 2px, rgba(255, 255, 255, 0.65) 0px 4px 6px -1px, rgba(231, 228, 228, 0.08) 0px 1px 0px inset;
+  transition: box-shadow 0.5s ease;rgba(233, 233, 233, 0.08)
 }
 
 
@@ -482,4 +485,148 @@ img[src="../image/obra360.png"]:hover {
 .radio:checked + .label {
   color: white;
   background: rgba(0, 0, 0, 0.25);
+}
+
+
+
+
+/* --------------------- Menu da tela principal*/
+
+:root {
+  --menuBackgroundColor: #2c3e50; /* Azul Escuro - Cor de fundo do menu */
+  --rLinkColor: #ffffff; /* Branco - Cor dos links */
+  --menuLinkColor: #ffffff; /* Azul - Cor dos links no menu */
+  --menuLinkColorUnactive: hsl(204, 8%, 76%); /* Cinza - Cor dos links não ativos no menu */
+  --textUnderlinedLineColor: #ff4500; /* Branco - Cor da linha de sublinhado dos links */
+  --menuBoxShadow: 0 1px 3px 0 rgb(178, 75, 56), 0 1px 2px 0 rgb(178, 75, 56); /* Sombra do menu */
+}
+
+.r-link {
+  display: var(--rLinkDisplay, inline-flex);
+}
+
+.r-link[href] {
+  color: var(--rLinkColor);
+  text-decoration: var(--rLinkTextDecoration, none);
+}
+
+.r-list {
+  padding-left: var(--rListPaddingLeft, 0);
+  margin-top: var(--rListMarginTop, 0);
+  margin-bottom: var(--rListMarginBottom, 0);
+  list-style: var(--rListListStyle, none);
+}
+
+.menu {
+  --rLinkColor: var(--menuLinkColor, currentColor);
+  
+}
+
+.menu__link {
+  display: var(--menuLinkDisplay, block);
+}
+
+.menu__link:focus {
+  background-color: var(--textUnderlinedLineColor, currentColor);
+}
+
+.menu:hover .menu__link:not(:hover) {
+  --rLinkColor: var(--menuLinkColorUnactive, rgba(22, 22, 22, .35));
+}
+
+.menu {
+  background-color: #0f2f4b;
+  box-shadow: var(--menuBoxShadow, 0 1px 3px 0 rgba(0, 0, 0, .12), 0 1px 2px 0 rgba(0, 0, 0, .24));
+}
+
+.menu__list {
+  display: flex;
+  justify-content: space-between; /* Espaçamento uniforme entre os elementos */
+  align-items: center; /* Centraliza verticalmente */
+  text-align: center;
+}
+
+.menu__logo {
+  order: -2; /* Move o logo para o início da lista */
+}
+
+.menu__link {
+  padding: var(--menuLinkPadding, 1.5rem 2.5rem);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.text-underlined {
+  position: relative;
+  overflow: hidden;
+
+  will-change: color;
+  transition: color .25s ease-out;
+}
+
+.text-underlined::before,
+.text-underlined::after {
+  content: "";
+  width: 0;
+  height: 3px;
+  background-color: var(--textUnderlinedLineColor, currentColor);
+
+  will-change: width;
+  transition: width .1s ease-out;
+
+  position: absolute;
+  bottom: 0;
+}
+
+.text-underlined::before {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.text-underlined::after {
+  right: 50%;
+  transform: translateX(50%);
+}
+
+.text-underlined:hover::before,
+.text-underlined:hover::after {
+  width: 100%;
+  transition-duration: .2s;
+}
+
+.menu__logout {
+  margin-left: auto; /* Move o botão de logout para a direita */
+}
+
+.menu__logo {
+  margin: auto;
+  margin-left: 43%;
+}
+
+img{width: 70px; height: 70px;}
+
+
+
+
+body{font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Open Sans, Ubuntu, Fira Sans, Helvetica Neue, sans-serif; }
+
+
+@keyframes trocaCor {
+  0%   {filter: brightness(1);}
+  50%  {filter: brightness(2);}
+  100% {filter: brightness(1);}
+}
+
+
+.suaClasse {
+  animation: trocaCor 3s infinite;
+}
+
+
+header {
+  width: 100%;
+  left: 0;
+  top: 0;
+  position: fixed; /* Adicione esta linha */
+  z-index: 999; /* Adicione esta linha */
 }

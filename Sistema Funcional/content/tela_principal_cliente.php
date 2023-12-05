@@ -26,22 +26,40 @@ $totalObras = $query2->fetchAll();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tela Principal</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    
     <link rel="stylesheet" href="../style/tela_principal_cliente.css">
+
+    <link rel="shortcut icon" href="../image/favicon.ico" type="image/x-icon">
 </head>
 
 <body>
 
     <header>
-        <!------ logo do obra360 ------->
-        <div class="logo-principal">
-            <a href="loginFuncionario.php"><img src="../image/obra360.png" alt="Logo do Obra360" width="100" height="100"></a>
+        <div class="page">
+            <nav class="page__menu menu">
+                <ul class="menu__list r-list">
+                    <li id="logout" class="menu__group menu__logout"><a href="tela_principal_construtora.php" class="menu__link r-link text-underlined">Sair</a></li>
+                    
+                    <!-----Nome e logo------>
+                    <li id="logout" class="menu__logo" style="display: flex; justify-content: space-between; align-items: center;">
+                        <h2 class="azul suaClasse">Obra360</h2>
+                        <img class="suaClasse" src="../image/obra360.png" alt="Logo do Obra360" width="100" height="100">
+                    </li>
+                </ul>
+            </nav>
+            <script>
+                document.getElementById('logout').onclick = function() {
+                    return confirm("Você realmente deseja sair?");
+                }
+            </script>
         </div>
+
 
         <!-------- Menu lateral --------->
 
         <ul class="side-menu">
             <li><a href=""><span class="fa fa-code"><img class="menu-img" src="../image/menu-branco.png" alt="menu barra"></span>Obra 360</a></li>
-            <li><a href="detalhes_obras.php"><span class="fa fa-cog"><img class="menu-info" src="../image/info-branco.png" alt="incone informacao"></span>Sobre nós</a></li>
+            <li><a href="sobre_nos.php"><span class="fa fa-cog"><img class="menu-info" src="../image/info-branco.png" alt="incone informacao"></span>Sobre nós</a></li>
             <li><a id="logout" href="tela_login_construtora.php"><span class="fa fa-check-square"><img class="menu-info" src="../image/sair-branco.png" alt="incone informacao"></span>Sair</a></li>
         </ul>
         <script>
@@ -53,13 +71,13 @@ $totalObras = $query2->fetchAll();
 
     <!----- Barra de pesquisa ------->
 
-    <div class="pesquisa">
+    <!--<div class="pesquisa">
         <form class="example">
             <input type="text" placeholder="Pesquisa..." name="search">
         </form>
-    </div>
+    </div>-->
 
-   
+    
 
 
 
@@ -71,7 +89,7 @@ $totalObras = $query2->fetchAll();
     <?php
     foreach ($obras as $obra) {
         if (isset($obra)) {
-            echo '<a href="detalhes_obras_cliente.php?idObra=' . $obra['id_obra'] . '">';
+            echo '<a href="detalhes_obras.php?idObra=' . $obra['id_obra'] . '">';
 
             echo '<div class="div-obra' . $obra['id_obra'] . '">';
 
@@ -106,7 +124,7 @@ $totalObras = $query2->fetchAll();
 
     <script>
         function alertarDelet() {
-            var resposta = confirm("Você realmente deseja excluir a obra?");
+            var resposta = confirm("Veja as informações da obra antes de deletar!");
             if (resposta) {
                 // O usuário clicou em "OK"
                 header('Location: tela_principal_construtora.php');
@@ -121,9 +139,10 @@ $totalObras = $query2->fetchAll();
 
     <script>
         function alertarEdit() {
-            var resposta = confirm("Você realmente deseja editar a obra?");
+            var resposta = confirm("Veja as informações da obra antes de atualizar!");
             if (resposta) {
                 // O usuário clicou em "OK"
+                header('Location: tela_principal_construtora.php');
                 alert("indo para a tela de editar");
             } else {
                 // O usuário clicou em "Cancelar"
@@ -155,7 +174,7 @@ $totalObras = $query2->fetchAll();
     ?>
 
 
-    
+
 
 
 </body>

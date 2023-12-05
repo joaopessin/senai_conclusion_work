@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulário de Cadastro</title>
+    <link rel="shortcut icon" href="../image/favicon.ico" type="image/x-icon">
 
     <link rel="stylesheet" href="../style/cadastro_funcionarios.css">
   </head>
@@ -26,7 +27,7 @@
 
           <div class="form-group">
             <button type="submit">Cadastrar</button>
-            <button type="submit">Cancelar</button>
+            <button><a href="tela_principal_construtora.php">Cancelar</button></a>
           </div>
 
         </form>
@@ -35,7 +36,7 @@
       </div>
 
       <div class="img-container">
-             <img src="../image/obra360.png" alt="">    
+             <img class="suaClasse" src="../image/obra360.png" alt="">    
       </div>
 
     </div>

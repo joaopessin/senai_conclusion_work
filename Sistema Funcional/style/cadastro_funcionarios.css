@@ -111,3 +111,17 @@ img{
   padding: 0px;
   }
 }
+
+
+a { text-decoration: none;  }
+
+@keyframes trocaCor {
+  0%   {filter: brightness(1);}
+  50%  {filter: brightness(2);}
+  100% {filter: brightness(1);}
+}
+
+
+.suaClasse {
+  animation: trocaCor 3s infinite;
+}
