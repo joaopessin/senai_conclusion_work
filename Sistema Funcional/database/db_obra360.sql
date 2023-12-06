@@ -11,14 +11,17 @@ senha_func_const CHAR(155) NOT NULL
 
 CREATE TABLE clientes (
 id_cliente INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+nome_cliente VARCHAR(155),
+cpf_cliente VARCHAR(155),
+telefone_cliente VARCHAR(155),
 email_cliente CHAR(100) NOT NULL,
 senha_cliente CHAR(155) NOT NULL
 );
 
+
 INSERT INTO funcionarios_construtora (email_func_const, senha_func_const) VALUES ('layson@gmail.com','123');
 INSERT INTO clientes (email_cliente, senha_cliente) VALUES ('felipe@gmail.com','321');
-SELECT * from funcionarios_construtora;
-SELECT * from clientes;
+
 
 CREATE TABLE obras (
 id_obra INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
@@ -39,8 +42,18 @@ id_etapa INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
 nome_etapa VARCHAR(50) NOT NULL,
 descricao_etapa VARCHAR(1000) NOT NULL,
 duracao VARCHAR(50) NOT NULL,
+caminho_foto VARCHAR(255) NOT NULL,
 periodicidade_atualizacao VARCHAR(50) NOT NULL
 );
+
+INSERT INTO etapas(nome_etapa, descricao_etapa, duracao, caminho_foto, periodicidade_atualizacao) VALUES
+('Início de Terraplanagem',
+'Aqui será constado o processo inicial da Terraplanagem e o andamento do mesmo.',
+'1 mês',
+'https://www.castroalveseng.com.br/imagens/informacoes/empresa-obra-residencial-01.jpg',
+'Semanal');
+
+SELECT * FROM etapas;
 
 CREATE TABLE atualizacoes(
 id_atualizacao INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
@@ -59,7 +72,7 @@ cargo_funcionario VARCHAR(50) NOT NULL
 INSERT INTO etapas (nome_etapa, descricao_etapa, duracao, periodicidade_atualizacao) values
 ('Terraplanagem', 'A terraplanagem é uma técnica que consiste em cortar e retirar o excesso de terra de um ambiente a fim de deixar a região nivelada.
 	Nesse método, o material retirado é, muitas vezes, utilizado para cobrir outros espaços mais vazios de forma a deixar tudo plano.', '30 dias', 'quinzenal'),
-('Funcação', 'A fundação é a estrutura que permite a distribuição de carregamentos (como o peso dos materiais) para o solo na construção de casas, prédios, viadutos ou qualquer grande edificação.
+('Fundação', 'A fundação é a estrutura que permite a distribuição de carregamentos (como o peso dos materiais) para o solo na construção de casas, prédios, viadutos ou qualquer grande edificação.
 	Por esse motivo, é também uma das primeiras etapas a ser realizada no momento de levantar uma obra.', '30 dias', 'quinzenal'),
 ('Alvenaria', 'Alvenaria é um conceito da construção civil que designa o conjunto de pedras, tijolos ou blocos que reunidos formam paredes, muros ou alicerces de uma edificação.', 
 	'45 dias', 'semanal'),

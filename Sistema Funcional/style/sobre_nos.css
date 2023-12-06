@@ -97,8 +97,6 @@ body{
 
 .descricao-texto{
   margin-left: 5%;
-  
-  
 }
 
 
@@ -111,7 +109,7 @@ body{
   border-radius: 10px;
   position: absolute;
   top: 50%;
-  left: 70%;
+  left: 50%;
   transform: translate(-50%, -50%);
   box-shadow: rgba(216, 212, 210, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
@@ -206,14 +204,3 @@ img[src="../image/icon-deletar-obra.png"]:hover {
   filter: brightness(2000%);
   transition: filter 0.5s ease;
 }
-
-#menu_detalhes{
-  background-color: var(--textUnderlinedLineColor, currentColor);
-
-}
-
-#menu_detalhes:focus{
-  text-decoration: none;
-}
-
-

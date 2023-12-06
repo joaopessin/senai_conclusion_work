@@ -6,37 +6,33 @@
     <title>Formulário de Cadastro</title>
     <link rel="shortcut icon" href="../image/favicon.ico" type="image/x-icon">
 
-    <link rel="stylesheet" href="../style/cadastro_etapa.css">
+    <link rel="stylesheet" href="./style/cadastro_atualizacao.css">
   </head>
   <body>
 
     <div class="container">
         <div class="form-container">
-        <h2>Nova Etapa</h2>
+        <h2>Nova Atualização</h2>
 
         <form>
           <div class="form-group">
-            <label for="nome">Nome da etapa:</label>
+            <label for="nome">Nome da atualização:</label>
             <input type="text" id="nome" name="nome" required>
           </div>
 
           <div class="form-group">
             <label for="mensagem">Descrição:</label>
-            <textarea id="mensagem" name="mensagem" rows="4" required placeholder=" Descreva o que deverá sem feito nessa etapa de construção"></textarea>
+            <textarea id="mensagem" name="mensagem" rows="4" required placeholder=" Descreva o que foi feito desde a última atualização"></textarea>
           </div>
 
           <div class="form-group">
-            <label for="data">Duração média::</label>
-            <input type="text" id="duracao_media" name="duracao_media" required>
+            <label for="data">Data:</label>
+            <input type="date" id="data" name="data" required>
           </div>
 
           <div class="form-group">
-            <label for="arquivo">Periodicidade de atualização:</label>
-            <select id="frequencia" name="frequencia">
-              <option value="semanal">Semanal</option>
-              <option value="quinzenal">15 em 15 dias</option>
-              <option value="mensal">Mensal</option>
-          </select>
+            <label for="arquivo">Foto do progresso:</label>
+            <input type="file" id="arquivo" name="arquivo" accept=".pdf, .doc, .docx, .png, .jpg" required>
         </div>
 
           <div class="form-group">

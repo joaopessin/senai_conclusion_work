@@ -162,3 +162,12 @@ h2{
 th{
   text-align: center;
 }
+
+#menu_detalhes{
+  background-color: var(--textUnderlinedLineColor, currentColor);
+
+}
+
+#menu_detalhes:focus{
+  text-decoration: none;
+}
