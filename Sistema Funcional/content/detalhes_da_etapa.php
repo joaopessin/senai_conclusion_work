@@ -3,14 +3,14 @@ include('../database/conexao.php');
 
 // Função para processar a exclusão da etapa
 function excluirEtapa($dbh, $etapaId) {
-    $query = $dbh->prepare('DELETE FROM etapas WHERE id_etapa = :id');
+    $query = $dbh->prepare('DELETE FROM detalhes_etapa WHERE id_etapa = :id');
     $query->bindParam(':id', $etapaId, PDO::PARAM_INT);
     return $query->execute();
 }
 
 // Função para processar a atualização da etapa
 function atualizarEtapa($dbh, $etapaId, $novoNome, $novaDescricao, $novaImagem, $novoDuracao, $novaPeriodicidade) {
-  $query = $dbh->prepare('UPDATE etapas SET nome_etapa = :nome, descricao_etapa = :descricao, caminho_foto = :imagem, duracao = :duracao, periodicidade_atualizacao = :periodicidade WHERE id_etapa = :id');
+  $query = $dbh->prepare('UPDATE detalhes_etapa SET nome_etapa = :nome, descricao_etapa = :descricao, caminho_foto = :imagem, duracao = :duracao, periodicidade_atualizacao = :periodicidade WHERE id_etapa = :id');
   $query->bindParam(':id', $etapaId, PDO::PARAM_INT);
   $query->bindParam(':nome', $novoNome, PDO::PARAM_STR);
   $query->bindParam(':descricao', $novaDescricao, PDO::PARAM_STR);
@@ -37,7 +37,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   }
 }
 
-$query = $dbh->prepare('SELECT * FROM etapas');
+$query = $dbh->prepare('SELECT * FROM detalhes_etapa');
 $query->execute();
 $etapas = $query->fetchAll();
 ?>

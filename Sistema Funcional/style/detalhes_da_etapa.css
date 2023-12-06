@@ -1,8 +1,6 @@
 
 * {
-  margin: 0px auto;
   padding: 0px;
-  text-align: center;  
 }
 .cont_principal {
   position: absolute;
@@ -554,6 +552,10 @@ th{
     .card-body button {
         transition: background-color 0.3s, color 0.3s;
         margin-right: 5px;
+        text-align: center;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 5px;
     }
 
     /* Ajusta o alinhamento dos botões Editar e Excluir */
@@ -601,8 +603,7 @@ th{
 
 /* Ajusta o alinhamento dos botões Editar e Excluir */
 .btn-group {
-  display: flex;
-  gap: 10px;
+  width: 80%;
 }
 
 /* Adiciona transição suave nos botões */
