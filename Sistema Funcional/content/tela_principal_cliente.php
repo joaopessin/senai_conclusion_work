@@ -42,7 +42,7 @@ $totalObras = $query2->fetchAll();
                     
                     <!-----Nome e logo------>
                     <li id="logout" class="menu__logo" style="display: flex; justify-content: space-between; align-items: center;">
-                        <h2 class="azul suaClasse">Obra360</h2>
+                        <h2 class="laranja suaClasse">Obra360</h2>
                         <img class="suaClasse" src="../image/obra360.png" alt="Logo do Obra360" width="100" height="100">
                     </li>
                 </ul>
@@ -89,7 +89,7 @@ $totalObras = $query2->fetchAll();
     <?php
     foreach ($obras as $obra) {
         if (isset($obra)) {
-            echo '<a href="detalhes_obras.php?idObra=' . $obra['id_obra'] . '">';
+            echo '<a href="detalhes_obras_cliente.php?idObra=' . $obra['id_obra'] . '">';
 
             echo '<div class="div-obra' . $obra['id_obra'] . '">';
 

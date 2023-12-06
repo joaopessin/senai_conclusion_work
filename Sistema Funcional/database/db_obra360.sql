@@ -42,9 +42,18 @@ id_etapa INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
 nome_etapa VARCHAR(50) NOT NULL,
 descricao_etapa VARCHAR(1000) NOT NULL,
 duracao VARCHAR(50) NOT NULL,
+caminho_foto VARCHAR(255) NOT NULL,
 periodicidade_atualizacao VARCHAR(50) NOT NULL
 );
 
+INSERT INTO etapas(nome_etapa, descricao_etapa, duracao, caminho_foto, periodicidade_atualizacao) VALUES
+('Início de Terraplanagem',
+'Aqui será constado o processo inicial da Terraplanagem e o andamento do mesmo.',
+'1 mês',
+'https://www.castroalveseng.com.br/imagens/informacoes/empresa-obra-residencial-01.jpg',
+'Semanal');
+
+SELECT * FROM etapas;
 
 CREATE TABLE atualizacoes(
 id_atualizacao INT NOT NULL PRIMARY KEY AUTO_INCREMENT,

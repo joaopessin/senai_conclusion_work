@@ -37,7 +37,7 @@ $totalObras = $query2->fetchAll();
         <div class="page">
             <nav class="page__menu menu">
                 <ul class="menu__list r-list">
-                    <li id="logout" class="menu__group menu__logout"><a href="tela_principal_construtora.php" class="menu__link r-link text-underlined">Sair</a></li>
+                    <li id="logout" class="menu__group menu__logout"><a href="tela_login_construtora.php" class="menu__link r-link text-underlined">Sair</a></li>
                     
                     <!-----Nome e logo------>
                     <li id="logout" class="menu__logo" style="display: flex; justify-content: space-between; align-items: center;">
@@ -68,6 +68,8 @@ $totalObras = $query2->fetchAll();
                 return confirm("Você realmente deseja sair?");
             }
         </script>
+
+        
     </header>
 
     <!----- Barra de pesquisa ------->
@@ -78,12 +80,11 @@ $totalObras = $query2->fetchAll();
         </form>
     </div>-->
 
+    
     <div class="btns">
         <div class="div-add-obra">
             <a href="cadastro_detalhes.php"><img class="add-obra suaClasse" src="../image/add-branco.png" alt="adicionar"></a>
         </div>
-
-
     </div>
 
 

@@ -413,3 +413,11 @@ header {
 
 body{font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Open Sans, Ubuntu, Fira Sans, Helvetica Neue, sans-serif; }
 
+#menu_detalhes{
+  background-color: var(--textUnderlinedLineColor, currentColor);
+
+}
+
+#menu_detalhes:focus{
+  text-decoration: none;
+}

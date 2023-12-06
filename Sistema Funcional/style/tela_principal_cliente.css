@@ -7,10 +7,10 @@
 }
 
 body{
-  background-color: #b24a38c4;
-  margin: 0;
+  background-color: #1e405e;
   padding: 0;
   font-family: Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Open Sans, Ubuntu, Fira Sans, Helvetica Neue, sans-serif;
 }
 
 .branco{
@@ -18,10 +18,6 @@ body{
 }
 .laranja{
   color: #b24b38;
-  margin-left: 10%;
-}
-.azul{
-  color: #0f2f4b;
   margin-left: 10%;
 }
 
@@ -58,7 +54,7 @@ body{
   height: 78%;
   width: 60px;
   list-style-type: none;
-  background: #b24b38;
+  background: #0f2f4b;
   overflow: hidden;
   transition: width .3s;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
@@ -66,7 +62,7 @@ body{
 
 .side-menu:hover {
   width: 300px;
-  box-shadow:  rgb(15, 47, 75) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  box-shadow: rgb(178, 75, 56) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 
 .side-menu li {
@@ -88,7 +84,7 @@ body{
 
 .side-menu li a:hover,
 .side-menu li:first-child a {
-  background: #0f2f4b;
+  background: #b24b38;
   display: block;
   transition: background 0.5s ease;
 }
@@ -153,14 +149,14 @@ form.example::after {
 .btns {
  width: 10%;
  height: 10%;
- margin-top: 35%;
+ margin-top: 39%;
  margin-left: 80%;
 }
 
 .div-add-obra:hover {
   background-color: #b24b38;
   transition: background-color 0.5s ease;
-  box-shadow: rgb(178, 75, 56) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  box-shadow: rgb(255, 255, 255) 0px 0px 0px 2px, rgba(255, 255, 255, 0.65) 0px 4px 6px -1px, rgba(231, 228, 228, 0.452) 0px 1px 0px inset;
   transition: box-shadow 0.5s ease;
 }
 
@@ -169,7 +165,7 @@ form.example::after {
 .div-obra1 {
   width: 20%;
   height: 25%;
-  background-color: #b24b38;
+  background-color: #0f2f4b;
   border-radius: 10px;
   position: absolute;
   top: 30%;
@@ -180,7 +176,7 @@ form.example::after {
 }
 
 .div-obra1:hover {
-  background-color: #0f2f4b;
+  background-color: #b24b38;
   transition: background-color 0.5s ease;
   box-shadow: rgba(255, 255, 255, 0.342) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
   
@@ -189,7 +185,7 @@ form.example::after {
 .div-obra2 {
   width: 20%;
   height: 25%;
-  background-color: #b24b38;
+  background-color: #0f2f4b;
   border-radius: 10px;
   position: absolute;
   top: 30%;
@@ -200,7 +196,7 @@ form.example::after {
 }
 
 .div-obra2:hover {
-  background-color: #0f2f4b;
+  background-color: #b24b38;
   transition: background-color 0.5s ease;
   box-shadow: rgba(255, 255, 255, 0.342) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
@@ -209,7 +205,7 @@ form.example::after {
 .div-obra3 {
   width: 20%;
   height: 25%;
-  background-color: #b24b38;
+  background-color: #0f2f4b;
   border-radius: 10px;
   position: absolute;
   top: 30%;
@@ -220,7 +216,65 @@ form.example::after {
 }
 
 .div-obra3:hover {
+  background-color: #b24b38;
+  transition: background-color 0.5s ease;
+  box-shadow: rgba(255, 255, 255, 0.342) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.div-obra4 {
+  width: 20%;
+  height: 25%;
   background-color: #0f2f4b;
+  border-radius: 10px;
+  position: absolute;
+  top: 60%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  transition: background-color 0.5s ease;
+}
+
+.div-obra4:hover {
+  background-color: #b24b38;
+  transition: background-color 0.5s ease;
+  box-shadow: rgba(255, 255, 255, 0.342) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.div-obra5 {
+  width: 20%;
+  height: 25%;
+  background-color: #0f2f4b;
+  border-radius: 10px;
+  position: absolute;
+  top: 60%;
+  left: 55%;
+  transform: translate(-50%, -50%);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  transition: background-color 0.5s ease;
+}
+
+.div-obra5:hover {
+  background-color: #b24b38;
+  transition: background-color 0.5s ease;
+  box-shadow: rgba(255, 255, 255, 0.342) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+
+.div-obra6 {
+  width: 20%;
+  height: 25%;
+  background-color: #0f2f4b;
+  border-radius: 10px;
+  position: absolute;
+  top: 60%;
+  left: 80%;
+  transform: translate(-50%, -50%);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  transition: background-color 0.5s ease;
+}
+
+.div-obra6:hover {
+  background-color: #b24b38;
   transition: background-color 0.5s ease;
   box-shadow: rgba(255, 255, 255, 0.342) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
@@ -497,12 +551,12 @@ img[src="../image/obra360.png"]:hover {
 /* --------------------- Menu da tela principal*/
 
 :root {
-  --menuBackgroundColor: #b24b38; /* Azul Escuro - Cor de fundo do menu */
+  --menuBackgroundColor: #2c3e50; /* Azul Escuro - Cor de fundo do menu */
   --rLinkColor: #ffffff; /* Branco - Cor dos links */
   --menuLinkColor: #ffffff; /* Azul - Cor dos links no menu */
   --menuLinkColorUnactive: hsl(204, 8%, 76%); /* Cinza - Cor dos links não ativos no menu */
-  --textUnderlinedLineColor: #0f2f4b; /* Branco - Cor da linha de sublinhado dos links */
-  --menuBoxShadow: 0 1px 3px 0 rgba(0, 0, 0, .12), 0 1px 2px 0 rgba(0, 0, 0, .24); /* Sombra do menu */
+  --textUnderlinedLineColor: #ff4500; /* Branco - Cor da linha de sublinhado dos links */
+  --menuBoxShadow: 0 1px 3px 0 rgb(178, 75, 56), 0 1px 2px 0 rgb(178, 75, 56); /* Sombra do menu */
 }
 
 .r-link {
@@ -523,6 +577,7 @@ img[src="../image/obra360.png"]:hover {
 
 .menu {
   --rLinkColor: var(--menuLinkColor, currentColor);
+  
 }
 
 .menu__link {
@@ -538,7 +593,7 @@ img[src="../image/obra360.png"]:hover {
 }
 
 .menu {
-  background-color:#b24b38  ;
+  background-color: #0f2f4b;
   box-shadow: var(--menuBoxShadow, 0 1px 3px 0 rgba(0, 0, 0, .12), 0 1px 2px 0 rgba(0, 0, 0, .24));
 }
 
@@ -610,10 +665,6 @@ img{width: 70px; height: 70px;}
 
 
 
-
-body{font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Open Sans, Ubuntu, Fira Sans, Helvetica Neue, sans-serif; }
-
-
 @keyframes trocaCor {
   0%   {filter: brightness(1);}
   50%  {filter: brightness(2);}
@@ -623,4 +674,13 @@ body{font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Open Sans
 
 .suaClasse {
   animation: trocaCor 3s infinite;
+}
+
+
+header {
+  width: 100%;
+  left: 0;
+  top: 0;
+  position: fixed; /* Adicione esta linha */
+  z-index: 999; /* Adicione esta linha */
 }

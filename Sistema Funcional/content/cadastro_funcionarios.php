@@ -12,7 +12,7 @@
 
     <div class="container">
         <div class="form-container">
-        <h2>Cadastro de Funcionário</h2>
+        <h2 class="azul suaClasse">Cadastro de Funcionário</h2>
 
         <form action="insert_funcionarios.php" method="post">
           <div class="form-group">
@@ -22,7 +22,7 @@
 
           <div class="form-group">
             <label for="mensagem">Cargo</label>
-            <input  type="text" id="mensagem" name="cargo_funcionario" rows="4" required></textarea>
+            <textarea  type="text" id="mensagem" name="cargo_funcionario" rows="4" required></textarea>
           </div>
 
           <div class="form-group">

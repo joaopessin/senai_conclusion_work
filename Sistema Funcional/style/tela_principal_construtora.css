@@ -8,9 +8,10 @@
 
 body{
   background-image: linear-gradient(#0f2f4b, #325777);
-  margin: 0;
+  margin: 40px;
   padding: 0;
   font-family: Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Open Sans, Ubuntu, Fira Sans, Helvetica Neue, sans-serif;
 }
 
 .branco{
@@ -156,8 +157,8 @@ form.example::after {
 .div-add-obra:hover {
   background-color: #b24b38;
   transition: background-color 0.5s ease;
-  box-shadow: rgb(255, 255, 255) 0px 0px 0px 2px, rgba(255, 255, 255, 0.65) 0px 4px 6px -1px, rgba(231, 228, 228, 0.08) 0px 1px 0px inset;
-  transition: box-shadow 0.5s ease;rgba(233, 233, 233, 0.08)
+  box-shadow: rgb(255, 255, 255) 0px 0px 0px 2px, rgba(255, 255, 255, 0.65) 0px 4px 6px -1px, rgba(231, 228, 228, 0.452) 0px 1px 0px inset;
+  transition: box-shadow 0.5s ease;
 }
 
 
@@ -216,6 +217,64 @@ form.example::after {
 }
 
 .div-obra3:hover {
+  background-color: #b24b38;
+  transition: background-color 0.5s ease;
+  box-shadow: rgba(255, 255, 255, 0.342) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.div-obra4 {
+  width: 20%;
+  height: 25%;
+  background-color: #0f2f4b;
+  border-radius: 10px;
+  position: absolute;
+  top: 60%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  transition: background-color 0.5s ease;
+}
+
+.div-obra4:hover {
+  background-color: #b24b38;
+  transition: background-color 0.5s ease;
+  box-shadow: rgba(255, 255, 255, 0.342) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.div-obra5 {
+  width: 20%;
+  height: 25%;
+  background-color: #0f2f4b;
+  border-radius: 10px;
+  position: absolute;
+  top: 60%;
+  left: 55%;
+  transform: translate(-50%, -50%);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  transition: background-color 0.5s ease;
+}
+
+.div-obra5:hover {
+  background-color: #b24b38;
+  transition: background-color 0.5s ease;
+  box-shadow: rgba(255, 255, 255, 0.342) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+
+.div-obra6 {
+  width: 20%;
+  height: 25%;
+  background-color: #0f2f4b;
+  border-radius: 10px;
+  position: absolute;
+  top: 60%;
+  left: 80%;
+  transform: translate(-50%, -50%);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  transition: background-color 0.5s ease;
+}
+
+.div-obra6:hover {
   background-color: #b24b38;
   transition: background-color 0.5s ease;
   box-shadow: rgba(255, 255, 255, 0.342) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
@@ -605,10 +664,6 @@ img[src="../image/obra360.png"]:hover {
 
 img{width: 70px; height: 70px;}
 
-
-
-
-body{font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Open Sans, Ubuntu, Fira Sans, Helvetica Neue, sans-serif; }
 
 
 @keyframes trocaCor {
