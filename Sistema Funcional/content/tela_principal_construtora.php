@@ -91,39 +91,6 @@ $totalObras = $query2->fetchAll();
 
     <!------ Conteudo Obras -------->
 
-    <?php
-        foreach($obras as $obra){
-            if(isset($obra)) {
-                echo '<a href="detalhes_obras.php?id_obra='.$obra['id_obra'].'">';
-    
-                echo '<div class="div-obra">';
-                echo '<h2 class="branco conteudo-div-obra">'.$obra['nome_obra'].'</h2>';
-                echo '<p class="branco conteudo-div-obra">Etapa atual</p>';
-                echo '<p class="branco conteudo-div-obra">Progresso:</p>';
-    
-                echo '<div class="container">';
-                echo '<input type="radio" class="radio" name="progress" value="five" id="five">';
-                echo '<label for="five" class="label">5%</label>';
-                echo '<input type="radio" class="radio" name="progress" value="twentyfive" id="twentyfive" checked>';
-                echo '<label for="twentyfive" class="label">25%</label>';
-                echo '<input type="radio" class="radio" name="progress" value="fifty" id="fifty">';
-                echo '<label for="fifty" class="label">50%</label>';
-                echo '<input type="radio" class="radio" name="progress" value="seventyfive" id="seventyfive">';
-                echo '<label for="seventyfive" class="label">75%</label>';
-                echo '<input type="radio" class="radio" name="progress" value="onehundred" id="onehundred">';
-                echo '<label for="onehundred" class="label">100%</label>';
-    
-                echo '<div class="progress">';
-                echo '<div class="progress-bar"></div>';
-                echo '</div>';
-                echo '</div>';
-                echo '</div>';
-                echo '</a>';
-            } else { echo 'Obras não cadastrada!'; }
-        }
-    ?>
-
-
 
 
 
@@ -222,9 +189,6 @@ $totalObras = $query2->fetchAll();
 
 
 
-    <!-- <a href="detalhes_obras.php?id_obra="> -->
-
-    
 
 </body>
 
