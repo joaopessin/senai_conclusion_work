@@ -32,6 +32,9 @@ body{
 .azul{
   color: #325777;
 }
+.azul2{color: #0F2F4B; transition: color 0.5s ease;}
+
+
 .descricao-geral{
   color: #0F2F4B;
   display: flex;
@@ -47,6 +50,7 @@ body{
 
 .branco{
   color: white;
+  transition: color 0.5s ease;
 }
 
 .descricao{
@@ -65,11 +69,14 @@ body{
     left: 28%;
     transform: translate(-50%, -50%);
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    transition: background-color 0.5s ease;
   }
 
   .div-obra1-detalhes:hover {
     box-shadow: rgb(178, 75, 56) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    background-color: #889aa82a ;
     transition: box-shadow 0.5s ease;
+    transition: background-color 0.5s ease;
     .titulo-obra{
       color: white;
       margin-left: 5%;
@@ -90,6 +97,11 @@ body{
       align-items: center;
       transition: color 0.5s ease;
       margin-top: 15%;
+      text-decoration: none;
+    }
+    .azul2{
+      color: white;
+      transition: color 0.5s ease;
     }
   }
 
@@ -103,8 +115,6 @@ body{
 
 
 
-
-
 .div-sobre {
   width: 35%;
   height: 50%;
@@ -114,11 +124,16 @@ body{
   left: 70%;
   transform: translate(-50%, -50%);
   box-shadow: rgba(216, 212, 210, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  background-color: #576e81;
+  transition: background-color 0.5s ease;
 }
 
 .div-sobre:hover {
-  box-shadow: rgb(194, 193, 192) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  box-shadow: rgb(178, 75, 56) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  background-color: #c4cbd1;
   transition: box-shadow 0.5s ease;
+  transition: background-color 0.5s ease;
+
   .titulo-sobre{
     color: #0F2F4B;
     margin-left: 5%;
@@ -137,6 +152,10 @@ body{
     display: flex;
     color: #0F2F4B;
     align-items: center;
+    transition: color 0.5s ease;
+  }
+  .branco{
+    color: #0F2F4B;
     transition: color 0.5s ease;
   }
   
@@ -169,6 +188,7 @@ body{
   align-items: center;
   transition: color 0.5s ease;
   margin-top: 15%;
+  text-decoration: none;
 }
 
 .div-icone-local-obra{
@@ -215,5 +235,6 @@ img[src="../image/icon-deletar-obra.png"]:hover {
 #menu_detalhes:focus{
   text-decoration: none;
 }
+
 
 

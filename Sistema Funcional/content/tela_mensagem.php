@@ -3,6 +3,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
     <title>Chat</title>
+    <link rel="shortcut icon" href="../image/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="../style/tela_mensagem.css">
     <link href="//code.ionicframework.com/1.0.0-beta.14/css/ionic.min.css" rel="stylesheet">
     <script src="//code.ionicframework.com/1.0.0-beta.14/js/ionic.bundle.min.js"></script> 

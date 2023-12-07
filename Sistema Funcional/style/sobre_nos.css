@@ -1,8 +1,10 @@
 body{
-  background-color: #576e81;
+  background-color: #8a9aa7;
   margin: 0;
   padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Open Sans, Ubuntu, Fira Sans, Helvetica Neue, sans-serif !important;
+  font-family: Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Open Sans, Ubuntu, Fira Sans, Helvetica Neue, sans-serif;
+  transition: background-color 0.5s ease;
 }
 
 .titulo-obra{
@@ -47,6 +49,7 @@ body{
 
 .branco{
   color: white;
+  transition: color 0.5s ease;
 }
 
 .descricao{
@@ -112,11 +115,16 @@ body{
   left: 50%;
   transform: translate(-50%, -50%);
   box-shadow: rgba(216, 212, 210, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  background-color: #325777e5;
+  transition: background-color 0.5s ease;
 }
 
 .div-sobre:hover {
-  box-shadow: rgb(194, 193, 192) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  box-shadow: rgb(178, 75, 56) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
   transition: box-shadow 0.5s ease;
+  background-color: #90a3b1;
+  transition: background-color 0.5s ease;
+
   .titulo-sobre{
     color: #0F2F4B;
     margin-left: 5%;
@@ -135,6 +143,10 @@ body{
     display: flex;
     color: #0F2F4B;
     align-items: center;
+    transition: color 0.5s ease;
+  }
+  .branco{
+    color: #0F2F4B;
     transition: color 0.5s ease;
   }
   
@@ -203,4 +215,141 @@ body{
 img[src="../image/icon-deletar-obra.png"]:hover {
   filter: brightness(2000%);
   transition: filter 0.5s ease;
+}
+
+
+:root {
+  --menuBackgroundColor: #2c3e50; /* Azul Escuro - Cor de fundo do menu */
+  --rLinkColor: #ffffff; /* Branco - Cor dos links */
+  --menuLinkColor: #ffffff; /* Azul - Cor dos links no menu */
+  --menuLinkColorUnactive: hsl(204, 8%, 76%); /* Cinza - Cor dos links não ativos no menu */
+  --textUnderlinedLineColor: #ff4500; /* Branco - Cor da linha de sublinhado dos links */
+  --menuBoxShadow: 0 1px 3px 0 rgb(178, 75, 56), 0 1px 2px 0 rgb(178, 75, 56); /* Sombra do menu */
+}
+
+.r-link {
+  display: var(--rLinkDisplay, inline-flex);
+}
+
+.r-link[href] {
+  color: var(--rLinkColor);
+  text-decoration: var(--rLinkTextDecoration, none);
+}
+
+.r-list {
+  padding-left: var(--rListPaddingLeft, 0);
+  margin-top: var(--rListMarginTop, 0);
+  margin-bottom: var(--rListMarginBottom, 0);
+  list-style: var(--rListListStyle, none);
+}
+
+.menu {
+  --rLinkColor: var(--menuLinkColor, currentColor);
+  
+}
+
+.menu__link {
+  display: var(--menuLinkDisplay, block);
+}
+
+.menu__link:focus {
+  background-color: var(--textUnderlinedLineColor, currentColor);
+}
+
+.menu:hover .menu__link:not(:hover) {
+  --rLinkColor: var(--menuLinkColorUnactive, rgba(22, 22, 22, .35));
+}
+
+.menu {
+  background-color: #0f2f4b;
+  box-shadow: var(--menuBoxShadow, 0 1px 3px 0 rgba(0, 0, 0, .12), 0 1px 2px 0 rgba(0, 0, 0, .24));
+}
+
+.menu__list {
+  display: flex;
+  justify-content: space-between; /* Espaçamento uniforme entre os elementos */
+  align-items: center; /* Centraliza verticalmente */
+  text-align: center;
+}
+
+.menu__logo {
+  order: -2; /* Move o logo para o início da lista */
+}
+
+.menu__link {
+  padding: var(--menuLinkPadding, 1.5rem 2.5rem);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.text-underlined {
+  position: relative;
+  overflow: hidden;
+
+  will-change: color;
+  transition: color .25s ease-out;
+}
+
+.text-underlined::before,
+.text-underlined::after {
+  content: "";
+  width: 0;
+  height: 3px;
+  background-color: var(--textUnderlinedLineColor, currentColor);
+
+  will-change: width;
+  transition: width .1s ease-out;
+
+  position: absolute;
+  bottom: 0;
+}
+
+.text-underlined::before {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.text-underlined::after {
+  right: 50%;
+  transform: translateX(50%);
+}
+
+.text-underlined:hover::before,
+.text-underlined:hover::after {
+  width: 100%;
+  transition-duration: .2s;
+}
+
+.menu__logout {
+  margin-left: auto; /* Move o botão de logout para a direita */
+}
+
+.menu__logo {
+  margin: auto;
+  margin-left: 43%;
+}
+
+img{width: 70px; height: 70px;}
+
+.tamanhoimg{width: 40px; height: 40px;}
+
+
+
+@keyframes trocaCor {
+  0%   {filter: brightness(1);}
+  50%  {filter: brightness(2);}
+  100% {filter: brightness(1);}
+}
+
+
+.suaClasse {
+  animation: trocaCor 3s infinite;
+}
+
+.laranja{
+  color: #b24b38;
+  margin-left: 30%;
+}
+.azul{
+  color: #0F2F4B;
 }

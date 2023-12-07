@@ -90,6 +90,18 @@ img{
   max-width: 50%; /* Defina a largura máxima */
   box-sizing: border-box;
   height: 50vh;
+  transition: background-color 0.5s ease;
+}
+.form-container:hover{
+  display: inline-block;
+  background-color: #ffffffcb; /* Cor de fundo do formulário */
+  padding: 20px;
+  border-radius: 10px 0px 0px 10px;
+  width: 90%; /* Ajuste a largura conforme necessário */
+  max-width: 50%; /* Defina a largura máxima */
+  box-sizing: border-box;
+  height: 50vh;
+  transition: background-color 0.5s ease;
   
 }
 
@@ -105,6 +117,37 @@ img{
   height: 50vh;
   text-align: center;
   box-shadow: rgb(178, 75, 56) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  transition: background-color 0.5s ease;
+}
+
+.img-container:hover{
+  background-color: #ffffffcb; /* Cor de fundo do formulário */
+  padding: 20px;
+  width: 90%; /* Ajuste a largura conforme necessário */
+  max-width: 50%; /* Defina a largura máxima */
+  box-sizing: border-box;
+  display: flex;
+  float: right;
+  border-radius: 0px 10px 10px 0px;
+  height: 50vh;
+  text-align: center;
+  box-shadow: rgb(178, 75, 56) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  transition: background-color 0.5s ease;
+}
+
+.laranja{
+  color: #b24b38;
+}
+
+@keyframes trocaCor {
+  0%   {filter: brightness(1);}
+  50%  {filter: brightness(2);}
+  100% {filter: brightness(1);}
+}
+
+
+.suaClasse {
+  animation: trocaCor 3s infinite;
 }
 
 
