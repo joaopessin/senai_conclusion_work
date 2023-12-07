@@ -50,6 +50,8 @@ img.profile-pic.right {
   right: 10px;
 }
 
+.button-icon ion-arrow-left-c { cursor: pointer; }
+
 .ion-email {
   float: right;
   font-size: 32px;
