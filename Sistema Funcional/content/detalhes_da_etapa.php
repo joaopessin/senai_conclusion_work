@@ -10,31 +10,50 @@ function excluirEtapa($dbh, $etapaId) {
 
 // Função para processar a atualização da etapa
 function atualizarEtapa($dbh, $etapaId, $novoNome, $novaDescricao, $novaImagem, $novoDuracao, $novaPeriodicidade) {
-  $query = $dbh->prepare('UPDATE detalhes_etapa SET nome_etapa = :nome, descricao_etapa = :descricao, caminho_foto = :imagem, duracao = :duracao, periodicidade_atualizacao = :periodicidade WHERE id_etapa = :id');
-  $query->bindParam(':id', $etapaId, PDO::PARAM_INT);
-  $query->bindParam(':nome', $novoNome, PDO::PARAM_STR);
-  $query->bindParam(':descricao', $novaDescricao, PDO::PARAM_STR);
-  $query->bindParam(':imagem', $novaImagem, PDO::PARAM_STR);
-  $query->bindParam(':duracao', $novoDuracao, PDO::PARAM_STR);
-  $query->bindParam(':periodicidade', $novaPeriodicidade, PDO::PARAM_STR);
-  return $query->execute();
+    $query = $dbh->prepare('UPDATE detalhes_etapa SET nome_etapa = :nome, descricao_etapa = :descricao, caminho_foto = :imagem, duracao = :duracao, periodicidade_atualizacao = :periodicidade WHERE id_etapa = :id');
+    $query->bindParam(':id', $etapaId, PDO::PARAM_INT);
+    $query->bindParam(':nome', $novoNome, PDO::PARAM_STR);
+    $query->bindParam(':descricao', $novaDescricao, PDO::PARAM_STR);
+    $query->bindParam(':imagem', $novaImagem, PDO::PARAM_STR);
+    $query->bindParam(':duracao', $novoDuracao, PDO::PARAM_STR);
+    $query->bindParam(':periodicidade', $novaPeriodicidade, PDO::PARAM_STR);
+    return $query->execute();
 }
 
-// Processar a exclusão ou atualização se houver dados do POST
+// Função para processar a inserção de uma nova etapa
+function criarEtapa($dbh, $novoNome, $novaDescricao, $novaImagem, $novoDuracao, $novaPeriodicidade) {
+    $query = $dbh->prepare('INSERT INTO detalhes_etapa (nome_etapa, descricao_etapa, caminho_foto, duracao, periodicidade_atualizacao) VALUES (:nome, :descricao, :imagem, :duracao, :periodicidade)');
+    $query->bindParam(':nome', $novoNome, PDO::PARAM_STR);
+    $query->bindParam(':descricao', $novaDescricao, PDO::PARAM_STR);
+    $query->bindParam(':imagem', $novaImagem, PDO::PARAM_STR);
+    $query->bindParam(':duracao', $novoDuracao, PDO::PARAM_STR);
+    $query->bindParam(':periodicidade', $novaPeriodicidade, PDO::PARAM_STR);
+    return $query->execute();
+}
+
+// Processar a exclusão, atualização ou criação se houver dados do POST
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (isset($_POST['excluir_etapa'])) {
         $etapaId = $_POST['etapa_id'];
         excluirEtapa($dbh, $etapaId);
     } elseif (isset($_POST['confirmar_edicao'])) {
-      $etapaId = $_POST['etapa_id'];
-      $novoNome = $_POST['novo_nome'];
-      $novaDescricao = $_POST['nova_descricao'];
-      $novaImagem = $_POST['nova_imagem'];
-      $novoDuracao = $_POST['novo_duracao'];  // Adicionado
-      $novaPeriodicidade = $_POST['nova_periodicidade'];  // Adicionado
+        $etapaId = $_POST['etapa_id'];
+        $novoNome = $_POST['novo_nome'];
+        $novaDescricao = $_POST['nova_descricao'];
+        $novaImagem = $_POST['nova_imagem'];
+        $novoDuracao = $_POST['novo_duracao'];  // Adicionado
+        $novaPeriodicidade = $_POST['nova_periodicidade'];  // Adicionado
 
-      atualizarEtapa($dbh, $etapaId, $novoNome, $novaDescricao, $novaImagem, $novoDuracao, $novaPeriodicidade);
-  }
+        atualizarEtapa($dbh, $etapaId, $novoNome, $novaDescricao, $novaImagem, $novoDuracao, $novaPeriodicidade);
+    } elseif (isset($_POST['criar_etapa'])) {
+        $novoNome = $_POST['novo_nome'];
+        $novaDescricao = $_POST['nova_descricao'];
+        $novaImagem = $_POST['nova_imagem'];
+        $novoDuracao = $_POST['novo_duracao'];
+        $novaPeriodicidade = $_POST['nova_periodicidade'];
+
+        criarEtapa($dbh, $novoNome, $novaDescricao, $novaImagem, $novoDuracao, $novaPeriodicidade);
+    }
 }
 
 $query = $dbh->prepare('SELECT * FROM detalhes_etapa');
@@ -71,7 +90,7 @@ $etapas = $query->fetchAll();
 </header>
 
 <div class="container mt-5">
-    <h2>Etapas da Obra</h2>
+    <h2>Detalhes da Etapa da Obra</h2>
     <div class="row" id="etapas-list">
         <?php foreach ($etapas as $etapa) { ?>
             <div class="col-md-4 mb-4">
@@ -126,10 +145,50 @@ $etapas = $query->fetchAll();
     </div>
 </div>
 
+<!-- Botão de criar nova etapa -->
+<button class="btn btn-success btn-criar-etapa" style="position: fixed; bottom: 10px; right: 10px;">+</button>
+
+<!-- Formulário de criação de etapa (inicialmente oculto) -->
+<form method="post" class="form-criar mt-3" style="display: none;">
+    <div class="mb-3">
+        <label for="novo_nome" class="form-label">Nome:</label>
+        <input type="text" class="form-control" id="novo_nome" name="novo_nome" required>
+    </div>
+    <div class="mb-3">
+        <label for="nova_descricao" class="form-label">Descrição:</label>
+        <textarea class="form-control" id="nova_descricao" name="nova_descricao" required></textarea>
+    </div>
+    <div class="mb-3">
+        <label for="novo_duracao" class="form-label">Tempo de Duração:</label>
+        <input type="text" class="form-control" id="novo_duracao" name="novo_duracao" required>
+    </div>
+    <div class="mb-3">
+        <label for="nova_periodicidade" class="form-label">Periodicidade:</label>
+        <input type="text" class="form-control" id="nova_periodicidade" name="nova_periodicidade" required>
+    </div>
+    <div class="mb-3">
+        <label for="nova_imagem" class="form-label">Imagem (URL):</label>
+        <input type="text" class="form-control" id="nova_imagem" name="nova_imagem">
+    </div>
+
+    <button type="submit" name="criar_etapa" class="btn btn-success">Criar</button>
+    <button type="button" class="btn btn-secondary btn-cancelar-criar">Cancelar</button>
+</form>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 <script>
     $(document).ready(function () {
+        // Exibe o formulário de criação ao clicar no botão '+'
+        $(".btn-criar-etapa").on("click", function () {
+            $(".form-criar").show();
+        });
+
+        // Adiciona um ouvinte de clique para o botão de cancelar criação
+        $(".btn-cancelar-criar").on("click", function () {
+            $(".form-criar").hide();
+        });
+
         $(".btn-editar").on("click", function () {
             var etapaId = $(this).data("etapa-id");
 

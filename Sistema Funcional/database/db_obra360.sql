@@ -63,8 +63,6 @@ INSERT INTO detalhes_etapa(nome_etapa, descricao_etapa, duracao, caminho_foto, p
 
 SELECT * FROM detalhes_etapa;
 
-DROP TABLE etapas;
-
 CREATE TABLE atualizacoes(
 id_atualizacao INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
 nome_atualizacao VARCHAR(50) NOT NULL,

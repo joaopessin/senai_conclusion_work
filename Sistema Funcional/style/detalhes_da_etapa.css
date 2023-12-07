@@ -631,3 +631,17 @@ th{
 }
 
 .mt-5 h2 { margin-bottom: 30px; }
+
+/* Adicione isso ao seu arquivo de estilo (detalhes_da_etapa.css) ou inclua diretamente no cabeçalho do HTML */
+
+
+.form-criar {
+  max-width: 300px; /* Ajuste o tamanho conforme necessário */
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #fff; /* Adicione a cor de fundo que preferir */
+    padding: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
