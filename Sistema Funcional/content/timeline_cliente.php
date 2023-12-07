@@ -38,7 +38,7 @@ $obras = $query2->fetchAll();
           <li class="menu__group">
             <?php
             foreach ($obras as $obra) {
-              echo '<a href="detalhes_obras.php?idObra=' . $obra['id_obra'] . '" class="menu__link r-link text-underlined">Detalhes</a>';
+              echo '<a href="detalhes_obras_cliente.php?idObra=' . $obra['id_obra'] . '" class="menu__link r-link text-underlined">Detalhes</a>';
             }
             ?>
           </li>
@@ -46,7 +46,7 @@ $obras = $query2->fetchAll();
           <li class="menu__group">
             <?php
             foreach ($obras as $obra) {
-              echo '<a href="timeline.php?idObra=' . $obra['id_obra'] . '" id="menu_detalhes" class="menu__link r-link text-underlined">Andamento</a>';
+              echo '<a href="timeline_cliente.php?idObra=' . $obra['id_obra'] . '" id="menu_detalhes" class="menu__link r-link text-underlined">Andamento</a>';
             }
             ?>
           </li>
@@ -54,7 +54,7 @@ $obras = $query2->fetchAll();
           <li class="menu__group">
             <?php
             foreach ($obras as $obra) {
-              echo '<a href="funcionarios.php?idObra=' . $obra['id_obra'] . '" class="menu__link r-link text-underlined">Funcionários</a>';
+              echo '<a href="acesso_funcionarios_cliente.php?idObra=' . $obra['id_obra'] . '" class="menu__link r-link text-underlined">Funcionários</a>';
             }
             ?>
           </li>

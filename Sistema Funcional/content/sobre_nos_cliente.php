@@ -17,7 +17,7 @@
         <div class="page">
             <nav class="page__menu menu">
                 <ul class="menu__list r-list">
-                    <li id="logout" class="menu__group menu__logout"><a href="tela_principal_construtora.php" class="menu__link r-link text-underlined">Sair</a></li>
+                    <li id="logout" class="menu__group menu__logout"><a href="tela_principal_cliente.php" class="menu__link r-link text-underlined">Sair</a></li>
 
                     <!-----Nome e logo------>
                     <li id="logout" class="menu__logo" style="display: flex; justify-content: space-between; align-items: center;">

@@ -19,14 +19,14 @@ body{
 }
 .laranja{
   color: #b24b38;
-  margin-left: 10%;
+  margin-left: 20%;
 }
 
 
 /*-------------- Deletar e Editar ------------*/
 .icons {
   position: absolute;
-  top: 10px;
+  top: 70px;
   right: 10px;
 }
 
@@ -141,7 +141,7 @@ form.example::after {
   display: flex;
   justify-content: center;
   align-items: center;
- 
+  transition: box-shadow 0.5s ease;
 }
 
 

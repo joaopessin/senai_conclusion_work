@@ -38,7 +38,7 @@ $totalObras = $query2->fetchAll();
         <div class="page">
             <nav class="page__menu menu">
                 <ul class="menu__list r-list">
-                    <li id="logout" class="menu__group menu__logout"><a href="tela_principal_construtora.php" class="menu__link r-link text-underlined">Sair</a></li>
+                    <li id="logout" class="menu__group menu__logout"><a href="tela_login_cliente.php" class="menu__link r-link text-underlined">Sair</a></li>
                     
                     <!-----Nome e logo------>
                     <li id="logout" class="menu__logo" style="display: flex; justify-content: space-between; align-items: center;">
@@ -59,11 +59,16 @@ $totalObras = $query2->fetchAll();
 
         <ul class="side-menu">
             <li><a href=""><span class="fa fa-code"><img class="menu-img" src="../image/menu-branco.png" alt="menu barra"></span>Obra 360</a></li>
-            <li><a href="sobre_nos.php"><span class="fa fa-cog"><img class="menu-info" src="../image/info-branco.png" alt="incone informacao"></span>Sobre nós</a></li>
-            <li><a id="logout" href="tela_login_construtora.php"><span class="fa fa-check-square"><img class="menu-info" src="../image/sair-branco.png" alt="incone informacao"></span>Sair</a></li>
+            <li><a href="sobre_nos_cliente.php"><span class="fa fa-cog"><img class="menu-info" src="../image/info-branco.png" alt="incone informacao"></span>Sobre nós</a></li>
+            <li><a id="logout2" href="tela_login_cliente.php"><span class="fa fa-check-square"><img class="menu-info" src="../image/sair-branco.png" alt="incone informacao"></span>Sair</a></li>
         </ul>
         <script>
             document.getElementById('logout').onclick = function() {
+                return confirm("Você realmente deseja sair?");
+            }
+        </script>
+        <script>
+            document.getElementById('logout2').onclick = function() {
                 return confirm("Você realmente deseja sair?");
             }
         </script>

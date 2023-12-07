@@ -142,9 +142,19 @@ table{
   max-width: 100%;
   margin: auto;
   background-color: white;
-  box-shadow: rgba(166, 167, 218, 0.35) 0px 5px 15px;
+  box-shadow: rgb(178, 75, 56) 0px 5px 15px;
   text-align: center;
+  transition: background-color 0.5s ease;
 }
+table:hover{
+  max-width: 100%;
+  margin: auto;
+  background-color: rgba(255, 255, 255, 0.671);
+  box-shadow: rgb(178, 75, 56) 0px 5px 15px;
+  text-align: center;
+  transition: background-color 0.5s ease;
+}
+
 
 .container{
   width: 100%;
@@ -170,4 +180,19 @@ th{
 
 #menu_detalhes:focus{
   text-decoration: none;
+}
+
+.laranja{
+  color: #b24b38;
+}
+
+@keyframes trocaCor {
+  0%   {filter: brightness(1);}
+  50%  {filter: brightness(2);}
+  100% {filter: brightness(1);}
+}
+
+
+.suaClasse {
+  animation: trocaCor 3s infinite;
 }

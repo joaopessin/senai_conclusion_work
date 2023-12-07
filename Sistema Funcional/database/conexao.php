@@ -1,7 +1,7 @@
 <?php
 /* Connect to a MySQL database using driver invocation */
 try {
-    $dsn = 'mysql:dbname=obra360;host=127.0.0.1;port=3310';
+    $dsn = 'mysql:dbname=obra360;host=127.0.0.1;port=3307';
     $user = 'root';
     $password = '';
 
